@@ -3,1207 +3,1052 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Albuquerque Digital Marketing | ABQ's Growth Agency</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>Albuquerque Digital Marketing</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
- 
-  :root {
-    --purple-deep: #1E0D3A;
-    --purple-mid: #2D1B4E;
-    --purple-light: #3D2663;
-    --turquoise: #00B4A6;
-    --turquoise-light: #00D4C4;
-    --coral: #E8572A;
-    --sand: #F2E8D5;
-    --sand-light: #FAF8F4;
-    --white: #FFFFFF;
-    --text-dark: #1A1A2E;
-    --text-muted: #5F5E6A;
-    --text-light: #9898A8;
-  }
- 
-  html { scroll-behavior: smooth; }
- 
-  body {
-    font-family: 'Inter', sans-serif;
-    color: var(--text-dark);
-    background: var(--sand-light);
-    overflow-x: hidden;
-  }
- 
-  /* NAV */
-  nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 5%;
-    height: 68px;
-    background: rgba(18, 6, 36, 0.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(0,180,166,0.2);
-  }
- 
-  .nav-logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-  }
- 
-  .nav-logo .zia {
-    width: 32px;
-    height: 32px;
-    fill: var(--turquoise);
-  }
- 
-  .nav-logo span {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.35rem;
-    letter-spacing: 0.08em;
-    color: var(--white);
-    line-height: 1;
-  }
- 
-  .nav-logo span em {
-    color: var(--turquoise);
-    font-style: normal;
-  }
- 
-  .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    list-style: none;
-  }
- 
-  .nav-links a {
-    text-decoration: none;
-    color: rgba(255,255,255,0.75);
-    font-size: 0.85rem;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    transition: color 0.2s;
-  }
- 
-  .nav-links a:hover { color: var(--turquoise-light); }
- 
-  .nav-cta {
-    background: var(--turquoise);
-    color: var(--purple-deep) !important;
-    padding: 9px 20px;
-    border-radius: 4px;
-    font-weight: 700 !important;
-    transition: background 0.2s !important;
-  }
- 
-  .nav-cta:hover { background: var(--turquoise-light) !important; color: var(--purple-deep) !important; }
- 
-  /* HERO */
-  .hero {
-    min-height: 100vh;
-    background: var(--purple-deep);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    padding: 100px 5% 80px;
-    text-align: center;
-  }
- 
-  .hero-bg-zia {
-    position: absolute;
-    width: 720px;
-    height: 720px;
-    opacity: 0.04;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
- 
-  .hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(0,180,166,0.12);
-    border: 1px solid rgba(0,180,166,0.35);
-    color: var(--turquoise-light);
-    font-size: 0.78rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    padding: 8px 18px;
-    border-radius: 100px;
-    margin-bottom: 2rem;
-  }
- 
-  .hero-badge::before {
-    content: '';
-    width: 7px;
-    height: 7px;
-    background: var(--turquoise);
-    border-radius: 50%;
-    animation: pulse 2s infinite;
-  }
- 
-  @keyframes pulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.5; transform: scale(0.8); }
-  }
- 
-  .hero h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(3.5rem, 9vw, 8rem);
-    line-height: 0.92;
-    letter-spacing: 0.03em;
-    color: var(--white);
-    max-width: 900px;
-    margin-bottom: 0.3em;
-  }
- 
-  .hero h1 .accent {
-    color: var(--turquoise);
-    display: block;
-  }
- 
-  .hero h1 .underline-word {
-    position: relative;
-    display: inline-block;
-  }
- 
-  .hero h1 .underline-word::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    background: var(--coral);
-    border-radius: 2px;
-    animation: slideIn 0.8s ease 0.5s both;
-  }
- 
-  @keyframes slideIn {
-    from { width: 0; }
-    to { width: 100%; }
-  }
- 
-  .hero-sub {
-    color: rgba(255,255,255,0.6);
-    font-size: 1.15rem;
-    font-weight: 300;
-    max-width: 560px;
-    line-height: 1.7;
-    margin: 1.8rem auto 2.8rem;
-  }
- 
-  .hero-sub strong {
-    color: rgba(255,255,255,0.9);
-    font-weight: 500;
-  }
- 
-  .hero-actions {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
- 
-  .btn-primary {
-    background: var(--turquoise);
-    color: var(--purple-deep);
-    font-weight: 700;
-    font-size: 0.95rem;
-    letter-spacing: 0.04em;
-    padding: 15px 36px;
-    border-radius: 4px;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-    transition: background 0.2s, transform 0.15s;
-  }
- 
-  .btn-primary:hover { background: var(--turquoise-light); transform: translateY(-1px); }
- 
-  .btn-ghost {
-    background: transparent;
-    color: var(--white);
-    font-weight: 500;
-    font-size: 0.95rem;
-    letter-spacing: 0.04em;
-    padding: 15px 36px;
-    border-radius: 4px;
-    border: 1px solid rgba(255,255,255,0.3);
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-    transition: border-color 0.2s, color 0.2s;
-  }
- 
-  .btn-ghost:hover { border-color: var(--turquoise); color: var(--turquoise); }
- 
-  .hero-stats {
-    display: flex;
-    gap: 3rem;
-    justify-content: center;
-    margin-top: 5rem;
-    flex-wrap: wrap;
-  }
- 
-  .stat {
-    text-align: center;
-  }
- 
-  .stat-number {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 3rem;
-    color: var(--turquoise);
-    letter-spacing: 0.04em;
-    line-height: 1;
-  }
- 
-  .stat-label {
-    color: rgba(255,255,255,0.5);
-    font-size: 0.78rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-top: 4px;
-  }
- 
-  .stat-divider {
-    width: 1px;
-    height: 50px;
-    background: rgba(255,255,255,0.12);
-    align-self: center;
-  }
- 
-  /* MARQUEE STRIP */
-  .marquee-strip {
-    background: var(--turquoise);
-    padding: 12px 0;
-    overflow: hidden;
-    white-space: nowrap;
-  }
- 
-  .marquee-inner {
-    display: inline-flex;
-    animation: marquee 25s linear infinite;
-    gap: 0;
-  }
- 
-  .marquee-item {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1rem;
-    letter-spacing: 0.12em;
-    color: var(--purple-deep);
-    padding: 0 2rem;
-  }
- 
-  .marquee-dot {
-    color: var(--coral);
-    padding: 0;
-  }
- 
-  @keyframes marquee {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
-  }
- 
-  /* SERVICES */
-  .services {
-    padding: 100px 5%;
-    background: var(--sand-light);
-  }
- 
-  .section-eyebrow {
-    font-size: 0.78rem;
-    font-weight: 600;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--turquoise);
-    margin-bottom: 0.75rem;
-  }
- 
-  .section-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(2.2rem, 5vw, 3.8rem);
-    letter-spacing: 0.04em;
-    color: var(--purple-deep);
-    line-height: 1;
-    max-width: 540px;
-  }
- 
-  .section-sub {
-    color: var(--text-muted);
-    font-size: 1rem;
-    line-height: 1.7;
-    max-width: 480px;
-    margin-top: 1rem;
-  }
- 
-  .services-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: 3.5rem;
-    gap: 2rem;
-    flex-wrap: wrap;
-  }
- 
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5px;
-    background: rgba(45,27,78,0.1);
-    border: 1.5px solid rgba(45,27,78,0.1);
-  }
- 
-  .service-card {
-    background: var(--sand-light);
-    padding: 2.5rem 2rem;
-    position: relative;
-    overflow: hidden;
-    transition: background 0.25s;
-    cursor: default;
-  }
- 
-  .service-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 3px;
-    height: 0;
-    background: var(--turquoise);
-    transition: height 0.3s ease;
-  }
- 
-  .service-card:hover { background: var(--white); }
-  .service-card:hover::before { height: 100%; }
- 
-  .service-icon {
-    width: 48px;
-    height: 48px;
-    background: rgba(0,180,166,0.1);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1.25rem;
-    font-size: 1.4rem;
-  }
- 
-  .service-card h3 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.5rem;
-    letter-spacing: 0.05em;
-    color: var(--purple-deep);
-    margin-bottom: 0.6rem;
-  }
- 
-  .service-card p {
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    line-height: 1.65;
-  }
- 
-  .service-tag {
-    display: inline-block;
-    margin-top: 1.2rem;
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--turquoise);
-  }
- 
-  /* WHY US */
-  .why {
-    padding: 100px 5%;
-    background: var(--purple-mid);
-    position: relative;
-    overflow: hidden;
-  }
- 
-  .why-bg {
-    position: absolute;
-    right: -100px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 500px;
-    height: 500px;
-    opacity: 0.05;
-  }
- 
-  .why .section-title { color: var(--white); }
-  .why .section-eyebrow { color: var(--turquoise-light); }
- 
-  .why-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    margin-top: 4rem;
-    align-items: center;
-  }
- 
-  .why-points {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
- 
-  .why-point {
-    display: flex;
-    gap: 1.25rem;
-    align-items: flex-start;
-  }
- 
-  .why-point-num {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 3rem;
-    color: rgba(0,180,166,0.25);
-    line-height: 1;
-    min-width: 52px;
-  }
- 
-  .why-point-content h4 {
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--white);
-    margin-bottom: 0.4rem;
-  }
- 
-  .why-point-content p {
-    color: rgba(255,255,255,0.55);
-    font-size: 0.9rem;
-    line-height: 1.65;
-  }
- 
-  .why-visual {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(0,180,166,0.2);
-    border-radius: 12px;
-    padding: 2.5rem;
-  }
- 
-  .results-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.2rem;
-    letter-spacing: 0.08em;
-    color: var(--turquoise);
-    margin-bottom: 1.5rem;
-  }
- 
-  .result-row {
-    padding: 1rem 0;
-    border-bottom: 1px solid rgba(255,255,255,0.07);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
- 
-  .result-row:last-child { border-bottom: none; }
- 
-  .result-client {
-    font-size: 0.85rem;
-    color: rgba(255,255,255,0.7);
-  }
- 
-  .result-industry {
-    font-size: 0.72rem;
-    color: rgba(255,255,255,0.35);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-top: 2px;
-  }
- 
-  .result-metric {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.6rem;
-    color: var(--turquoise);
-    letter-spacing: 0.05em;
-  }
- 
-  .result-metric span {
-    font-family: 'Inter', sans-serif;
-    font-size: 0.7rem;
-    font-weight: 500;
-    color: rgba(255,255,255,0.4);
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    display: block;
-    text-align: right;
-    margin-top: -4px;
-  }
- 
-  /* PROCESS */
-  .process {
-    padding: 100px 5%;
-    background: var(--white);
-  }
- 
-  .process-steps {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0;
-    margin-top: 4rem;
-    position: relative;
-  }
- 
-  .process-steps::before {
-    content: '';
-    position: absolute;
-    top: 36px;
-    left: 12.5%;
-    right: 12.5%;
-    height: 1px;
-    background: rgba(0,180,166,0.3);
-  }
- 
-  .process-step {
-    padding: 0 1.5rem;
-    text-align: center;
-  }
- 
-  .step-circle {
-    width: 72px;
-    height: 72px;
-    border-radius: 50%;
-    background: var(--purple-deep);
-    border: 3px solid var(--turquoise);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 1.5rem;
-    position: relative;
-    z-index: 1;
-  }
- 
-  .step-circle span {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.6rem;
-    color: var(--turquoise);
-    letter-spacing: 0.05em;
-  }
- 
-  .process-step h4 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.25rem;
-    letter-spacing: 0.06em;
-    color: var(--purple-deep);
-    margin-bottom: 0.5rem;
-  }
- 
-  .process-step p {
-    color: var(--text-muted);
-    font-size: 0.85rem;
-    line-height: 1.6;
-  }
- 
-  /* TESTIMONIALS */
-  .testimonials {
-    padding: 100px 5%;
-    background: var(--sand);
-  }
- 
-  .testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-    margin-top: 3.5rem;
-  }
- 
-  .testimonial-card {
-    background: var(--white);
-    border-radius: 12px;
-    padding: 2rem;
-    position: relative;
-    border: 1px solid rgba(45,27,78,0.07);
-  }
- 
-  .testimonial-card::before {
-    content: '"';
-    font-family: Georgia, serif;
-    font-size: 6rem;
-    color: rgba(0,180,166,0.12);
-    position: absolute;
-    top: -20px;
-    left: 18px;
-    line-height: 1;
-  }
- 
-  .testimonial-text {
-    color: var(--text-dark);
-    font-size: 0.95rem;
-    line-height: 1.7;
-    margin-bottom: 1.5rem;
-    position: relative;
-    z-index: 1;
-  }
- 
-  .testimonial-author {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
- 
-  .author-avatar {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: var(--purple-mid);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 0.85rem;
-    color: var(--turquoise);
-  }
- 
-  .author-name {
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: var(--purple-deep);
-  }
- 
-  .author-biz {
-    font-size: 0.78rem;
-    color: var(--text-muted);
-    margin-top: 2px;
-  }
- 
-  .testimonial-stars {
-    color: var(--coral);
-    font-size: 0.85rem;
-    margin-bottom: 1rem;
-  }
- 
-  /* CTA */
-  .cta-section {
-    padding: 100px 5%;
-    background: var(--purple-deep);
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
- 
-  .cta-bg-zia {
-    position: absolute;
-    bottom: -150px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 600px;
-    height: 600px;
-    opacity: 0.05;
-  }
- 
-  .cta-section h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(2.5rem, 6vw, 5rem);
-    letter-spacing: 0.04em;
-    color: var(--white);
-    max-width: 700px;
-    margin: 0 auto 1.5rem;
-    line-height: 1;
-  }
- 
-  .cta-section h2 span { color: var(--turquoise); }
- 
-  .cta-section p {
-    color: rgba(255,255,255,0.55);
-    font-size: 1rem;
-    max-width: 460px;
-    margin: 0 auto 2.5rem;
-    line-height: 1.7;
-  }
- 
-  .cta-actions {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
- 
-  /* FOOTER */
-  footer {
-    background: #0D0520;
-    padding: 60px 5% 30px;
-    color: rgba(255,255,255,0.45);
-  }
- 
-  .footer-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 3rem;
-    flex-wrap: wrap;
-    margin-bottom: 3rem;
-    padding-bottom: 3rem;
-    border-bottom: 1px solid rgba(255,255,255,0.07);
-  }
- 
-  .footer-brand .nav-logo { margin-bottom: 1rem; }
- 
-  .footer-tagline {
-    font-size: 0.85rem;
-    line-height: 1.6;
-    max-width: 260px;
-    color: rgba(255,255,255,0.4);
-  }
- 
-  .footer-links h5 {
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.6);
-    margin-bottom: 1rem;
-  }
- 
-  .footer-links ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-  }
- 
-  .footer-links a {
-    color: rgba(255,255,255,0.4);
-    text-decoration: none;
-    font-size: 0.875rem;
-    transition: color 0.2s;
-  }
- 
-  .footer-links a:hover { color: var(--turquoise); }
- 
-  .footer-contact {
-    font-size: 0.875rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-  }
- 
-  .footer-contact a {
-    color: var(--turquoise);
-    text-decoration: none;
-  }
- 
-  .footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-    font-size: 0.78rem;
-  }
- 
-  .footer-bottom a {
-    color: rgba(255,255,255,0.35);
-    text-decoration: none;
-  }
- 
-  @media (max-width: 768px) {
-    .nav-links { display: none; }
-    .why-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-    .process-steps { grid-template-columns: 1fr 1fr; }
-    .process-steps::before { display: none; }
-    .services-header { flex-direction: column; }
-    .hero-stats { gap: 1.5rem; }
-    .stat-divider { display: none; }
-  }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --blue:#6B7FE3;
+  --purple:#A855C8;
+  --pink:#E8579A;
+  --dark:#0D0D1A;
+  --dark2:#13131F;
+  --dark3:#1A1A2E;
+  --white:#FFFFFF;
+  --offwhite:#F8F8FC;
+  --text:#1A1A2E;
+  --muted:#6B6B8A;
+  --light:#E8E8F5;
+  --grad:linear-gradient(135deg,#6B7FE3 0%,#A855C8 50%,#E8579A 100%);
+  --grad-text:linear-gradient(90deg,#6B7FE3,#A855C8,#E8579A);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden}
+ 
+.grad-text{background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+ 
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 4%;height:72px;
+  background:rgba(13,13,26,0.96);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(168,85,200,0.2);
+  transition:box-shadow 0.3s;
+}
+nav.scrolled{box-shadow:0 2px 24px rgba(107,127,227,0.15)}
+ 
+/* Logo sizing - responsive */
+.nav-logo{display:flex;align-items:center;cursor:pointer;text-decoration:none}
+.nav-logo-img{
+  height:58px;
+  width:auto;
+  max-width:280px;
+  object-fit:contain;
+  transition:opacity 0.2s;
+}
+.nav-logo-img:hover{opacity:0.85}
+ 
+.nav-links{display:flex;align-items:center;gap:1.6rem;list-style:none}
+.nav-links a{
+  text-decoration:none;color:rgba(255,255,255,0.65);
+  font-size:0.85rem;font-weight:500;letter-spacing:0.02em;
+  transition:color 0.2s;cursor:pointer;white-space:nowrap;
+}
+.nav-links a:hover,.nav-links a.active{color:white}
+.nav-cta{
+  background:var(--grad);color:white!important;
+  padding:9px 20px;border-radius:6px;font-weight:600!important;
+  transition:opacity 0.2s!important;
+}
+.nav-cta:hover{opacity:0.85}
+ 
+/* PAGE SYSTEM */
+.page{display:none;min-height:100vh;padding-top:72px}
+.page.active{display:block}
+ 
+/* ========== HERO ========== */
+.hero{
+  min-height:calc(100vh - 72px);
+  position:relative;overflow:hidden;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  text-align:center;padding:80px 5%;
+}
+.hero-river-bg{
+  position:absolute;inset:0;
+  background:
+    linear-gradient(180deg,rgba(13,13,26,0.82) 0%,rgba(13,13,26,0.6) 60%,rgba(13,13,26,0.88) 100%),
+    url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=85') center/cover no-repeat;
+}
+.hero-river-bg::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(107,127,227,0.18) 0%,rgba(168,85,200,0.12) 50%,rgba(232,87,154,0.15) 100%);
+}
+.hero-content{position:relative;z-index:2}
+ 
+/* Hero logo - bigger, prominent */
+.hero-logo{
+  margin-bottom:2.5rem;
+}
+.hero-logo img{
+  height:auto;
+  width:min(560px, 82vw);
+  object-fit:contain;
+  display:block;
+  margin:0 auto;
+}
+ 
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.2);
+  color:rgba(255,255,255,0.85);
+  font-size:0.78rem;font-weight:500;letter-spacing:0.08em;
+  padding:7px 18px;border-radius:100px;margin-bottom:1.8rem;
+  backdrop-filter:blur(8px);
+}
+.hero-badge span{width:7px;height:7px;background:var(--blue);border-radius:50%;animation:pulse 2s infinite;flex-shrink:0}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.4;transform:scale(0.75)}}
+ 
+.hero h1{
+  font-family:'Rajdhani',sans-serif;
+  font-size:clamp(2.5rem,7vw,5.5rem);
+  font-weight:700;line-height:0.97;
+  color:var(--white);margin-bottom:0.35em;
+  text-transform:uppercase;letter-spacing:0.02em;
+}
+.hero h1 .grad-line{
+  background:var(--grad-text);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  display:block;
+}
+.hero-sub{
+  color:rgba(255,255,255,0.65);font-size:1.05rem;
+  font-weight:300;max-width:520px;line-height:1.72;
+  margin:1.4rem auto 2.4rem;
+}
+.hero-sub strong{color:rgba(255,255,255,0.92);font-weight:500}
+.hero-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+ 
+.btn-grad{
+  background:var(--grad);color:var(--white);
+  font-weight:600;font-size:0.92rem;
+  padding:13px 32px;border-radius:6px;
+  border:none;cursor:pointer;text-decoration:none;
+  display:inline-block;transition:opacity 0.2s,transform 0.15s;
+  letter-spacing:0.02em;
+}
+.btn-grad:hover{opacity:0.85;transform:translateY(-1px)}
+.btn-outline{
+  background:transparent;color:var(--white);
+  font-weight:500;font-size:0.92rem;
+  padding:13px 32px;border-radius:6px;
+  border:1.5px solid rgba(255,255,255,0.35);
+  cursor:pointer;text-decoration:none;display:inline-block;
+  transition:border-color 0.2s,color 0.2s;
+}
+.btn-outline:hover{border-color:var(--blue);color:var(--blue)}
+ 
+.hero-stats{
+  display:flex;gap:2.5rem;justify-content:center;
+  margin-top:4.5rem;flex-wrap:wrap;position:relative;z-index:2;
+}
+.stat{text-align:center}
+.stat-number{
+  font-family:'Rajdhani',sans-serif;font-size:2.6rem;
+  font-weight:700;letter-spacing:0.04em;
+  background:var(--grad-text);-webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;background-clip:text;
+}
+.stat-label{color:rgba(255,255,255,0.45);font-size:0.72rem;text-transform:uppercase;letter-spacing:0.1em;margin-top:3px}
+.stat-div{width:1px;height:44px;background:rgba(255,255,255,0.12);align-self:center}
+ 
+/* MARQUEE */
+.marquee-strip{background:var(--grad);padding:11px 0;overflow:hidden;white-space:nowrap}
+.marquee-inner{display:inline-flex;animation:marquee 28s linear infinite}
+.marquee-item{font-size:0.82rem;font-weight:600;letter-spacing:0.1em;color:white;padding:0 1.8rem;text-transform:uppercase}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+ 
+/* SECTIONS */
+.section{padding:88px 5%}
+.section-white{background:var(--white)}
+.section-off{background:var(--offwhite)}
+.section-dark{background:var(--dark)}
+ 
+.eyebrow{
+  font-size:0.72rem;font-weight:700;letter-spacing:0.15em;
+  text-transform:uppercase;margin-bottom:0.7rem;
+  background:var(--grad-text);-webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;background-clip:text;
+}
+.section-title{
+  font-family:'Rajdhani',sans-serif;
+  font-size:clamp(1.9rem,3.5vw,3rem);
+  font-weight:700;line-height:1.02;text-transform:uppercase;
+  letter-spacing:0.03em;color:var(--text);
+}
+.section-title.light{color:var(--white)}
+.section-sub{color:var(--muted);font-size:0.97rem;line-height:1.72;margin-top:1rem;max-width:500px}
+ 
+/* SERVICES GRID */
+.services-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+  gap:1px;background:var(--light);margin-top:3rem;
+}
+.svc-card{
+  background:var(--white);padding:2.2rem 1.8rem;
+  position:relative;overflow:hidden;cursor:pointer;
+  transition:background 0.2s;
+}
+.svc-card::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;
+  height:2px;background:var(--grad);
+  transform:scaleX(0);transform-origin:left;
+  transition:transform 0.3s;
+}
+.svc-card:hover{background:var(--offwhite)}
+.svc-card:hover::after{transform:scaleX(1)}
+.svc-icon{
+  font-size:1.8rem;margin-bottom:1rem;
+  width:50px;height:50px;border-radius:10px;
+  background:linear-gradient(135deg,rgba(107,127,227,0.1),rgba(232,87,154,0.1));
+  display:flex;align-items:center;justify-content:center;
+}
+.svc-card h3{
+  font-family:'Rajdhani',sans-serif;font-size:1.25rem;
+  font-weight:700;letter-spacing:0.04em;text-transform:uppercase;
+  color:var(--text);margin-bottom:0.5rem;
+}
+.svc-card p{color:var(--muted);font-size:0.855rem;line-height:1.65}
+.svc-link{
+  display:inline-block;margin-top:1rem;font-size:0.75rem;
+  font-weight:700;letter-spacing:0.06em;text-transform:uppercase;
+  background:var(--grad-text);-webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;background-clip:text;cursor:pointer;
+}
+ 
+/* WHY GRID */
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;align-items:start}
+.why-points{display:flex;flex-direction:column;gap:1.8rem;margin-top:2.2rem}
+.why-point{display:flex;gap:1.2rem;align-items:flex-start}
+.why-num{
+  font-family:'Rajdhani',sans-serif;font-size:2.2rem;
+  font-weight:700;min-width:44px;line-height:1;
+  background:var(--grad-text);-webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;background-clip:text;opacity:0.35;
+}
+.why-point h4{font-size:0.95rem;font-weight:600;color:var(--white);margin-bottom:0.35rem}
+.why-point p{color:rgba(255,255,255,0.45);font-size:0.855rem;line-height:1.65}
+.results-card{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(168,85,200,0.18);
+  border-radius:12px;padding:1.8rem;
+}
+.results-head{
+  font-family:'Rajdhani',sans-serif;font-size:0.9rem;
+  letter-spacing:0.1em;text-transform:uppercase;
+  background:var(--grad-text);-webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;background-clip:text;
+  margin-bottom:1.4rem;font-weight:700;
+}
+.result-row{
+  padding:0.85rem 0;border-bottom:1px solid rgba(255,255,255,0.05);
+  display:flex;justify-content:space-between;align-items:center;
+}
+.result-row:last-child{border:none}
+.result-client{font-size:0.855rem;color:rgba(255,255,255,0.72)}
+.result-ind{font-size:0.68rem;color:rgba(255,255,255,0.28);text-transform:uppercase;letter-spacing:0.06em;margin-top:2px}
+.result-metric{
+  font-family:'Rajdhani',sans-serif;font-size:1.45rem;font-weight:700;
+  background:var(--grad-text);-webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;background-clip:text;text-align:right;
+}
+.result-metric span{
+  font-family:'Inter',sans-serif;font-size:0.62rem;
+  color:rgba(255,255,255,0.3);letter-spacing:0.06em;
+  text-transform:uppercase;display:block;margin-top:-2px;
+  -webkit-text-fill-color:rgba(255,255,255,0.3);
+}
+ 
+/* PROCESS STEPS */
+.process-steps{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  margin-top:3.5rem;position:relative;
+}
+.process-steps::before{
+  content:'';position:absolute;top:34px;
+  left:12.5%;right:12.5%;height:1px;
+  background:var(--grad);opacity:0.25;
+}
+.proc-step{padding:0 1.2rem;text-align:center}
+.step-circle{
+  width:68px;height:68px;border-radius:50%;
+  background:var(--white);
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 1.4rem;position:relative;z-index:1;
+  box-shadow:0 0 0 2px var(--purple);
+}
+.step-circle span{
+  font-family:'Rajdhani',sans-serif;font-size:1.4rem;font-weight:700;
+  background:var(--grad-text);-webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;background-clip:text;
+}
+.proc-step h4{
+  font-family:'Rajdhani',sans-serif;font-size:1.05rem;
+  font-weight:700;text-transform:uppercase;letter-spacing:0.05em;
+  color:var(--text);margin-bottom:0.45rem;
+}
+.proc-step p{color:var(--muted);font-size:0.82rem;line-height:1.6}
+ 
+/* TESTIMONIALS */
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:3rem}
+.testi-card{
+  background:var(--white);border-radius:12px;
+  padding:1.8rem;border:1px solid var(--light);position:relative;
+}
+.testi-card::before{
+  content:'"';font-family:Georgia,serif;font-size:4.5rem;
+  background:var(--grad-text);-webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;background-clip:text;
+  position:absolute;top:-8px;left:16px;line-height:1;opacity:0.25;
+}
+.testi-stars{margin-bottom:0.85rem;font-size:0.85rem}
+.testi-star{background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.testi-text{color:var(--text);font-size:0.875rem;line-height:1.7;margin-bottom:1.4rem;position:relative;z-index:1}
+.testi-author{display:flex;align-items:center;gap:10px}
+.author-av{
+  width:40px;height:40px;border-radius:50%;
+  background:var(--grad);display:flex;align-items:center;
+  justify-content:center;font-weight:700;font-size:0.75rem;color:white;flex-shrink:0;
+}
+.author-name{font-weight:600;font-size:0.855rem;color:var(--text)}
+.author-biz{font-size:0.72rem;color:var(--muted);margin-top:2px}
+ 
+/* CTA */
+.cta-sec{
+  padding:88px 5%;text-align:center;
+  background:var(--dark);position:relative;overflow:hidden;
+}
+.cta-sec::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 50% 50%,rgba(168,85,200,0.12) 0%,transparent 70%);
+}
+.cta-sec h2{
+  font-family:'Rajdhani',sans-serif;
+  font-size:clamp(1.9rem,4.5vw,3.6rem);
+  font-weight:700;text-transform:uppercase;letter-spacing:0.03em;
+  color:var(--white);max-width:680px;margin:0 auto 1.4rem;line-height:1.02;
+  position:relative;z-index:1;
+}
+.cta-sec p{color:rgba(255,255,255,0.48);max-width:440px;margin:0 auto 2.4rem;line-height:1.7;position:relative;z-index:1}
+.cta-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;position:relative;z-index:1}
+ 
+/* FOOTER */
+footer{background:#060610;padding:56px 5% 26px}
+.footer-inner{
+  display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;
+  gap:2.5rem;margin-bottom:2.8rem;padding-bottom:2.8rem;
+  border-bottom:1px solid rgba(255,255,255,0.05);
+}
+ 
+/* Footer logo - abbreviated, visible on dark */
+.footer-logo-img{
+  height:auto;
+  width:min(220px,72%);
+  object-fit:contain;
+  display:block;
+  margin-bottom:1rem;
+}
+.footer-tagline{font-size:0.82rem;line-height:1.65;color:rgba(255,255,255,0.3);max-width:220px}
+.footer-col h5{
+  font-size:0.7rem;font-weight:700;letter-spacing:0.12em;
+  text-transform:uppercase;margin-bottom:0.9rem;
+  background:var(--grad-text);-webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;background-clip:text;
+}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:0.55rem}
+.footer-col a{
+  color:rgba(255,255,255,0.36);text-decoration:none;
+  font-size:0.855rem;transition:color 0.2s;cursor:pointer;
+}
+.footer-col a:hover{color:var(--purple)}
+.footer-contact-link{color:var(--blue)!important}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;font-size:0.75rem;color:rgba(255,255,255,0.25);flex-wrap:wrap;gap:1rem}
+.footer-bottom a{color:rgba(255,255,255,0.25);text-decoration:none}
+ 
+/* PAGE HERO */
+.page-hero{
+  padding:100px 5% 72px;
+  background:var(--dark);
+  position:relative;overflow:hidden;
+}
+.page-hero::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 25% 50%,rgba(107,127,227,0.18) 0%,transparent 60%);
+}
+.page-hero-content{position:relative;z-index:1;max-width:680px}
+.page-hero h1{
+  font-family:'Rajdhani',sans-serif;
+  font-size:clamp(2.2rem,4.5vw,4rem);
+  font-weight:700;text-transform:uppercase;letter-spacing:0.03em;
+  color:var(--white);line-height:1.02;margin-bottom:1rem;
+}
+.page-hero p{color:rgba(255,255,255,0.55);font-size:1rem;line-height:1.72;max-width:540px}
+ 
+/* SERVICES DETAIL */
+.service-detail{padding:72px 5%;border-bottom:1px solid var(--light)}
+.service-detail:nth-child(even){background:var(--offwhite)}
+.sd-grid{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;align-items:start}
+.sd-grid.rev{direction:rtl}
+.sd-grid.rev>*{direction:ltr}
+.svc-detail-icon{
+  font-size:2.5rem;width:72px;height:72px;border-radius:14px;
+  background:linear-gradient(135deg,rgba(107,127,227,0.1),rgba(232,87,154,0.1));
+  display:flex;align-items:center;justify-content:center;margin-bottom:1.4rem;
+}
+.svc-detail-title{
+  font-family:'Rajdhani',sans-serif;font-size:1.9rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:0.03em;margin-bottom:0.85rem;
+  background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.svc-detail-desc{color:var(--muted);line-height:1.75;margin-bottom:1.4rem;font-size:0.93rem}
+.svc-features{list-style:none;display:flex;flex-direction:column;gap:0.65rem;margin-bottom:1.5rem}
+.svc-features li{display:flex;align-items:flex-start;gap:9px;font-size:0.875rem;color:var(--text)}
+.svc-features li::before{
+  content:'✓';background:var(--grad-text);-webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;background-clip:text;font-weight:700;flex-shrink:0;margin-top:1px;
+}
+.svc-visual{
+  background:linear-gradient(135deg,rgba(107,127,227,0.06),rgba(232,87,154,0.06));
+  border-radius:14px;padding:2.2rem;border:1px solid var(--light);
+}
+.svc-stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.svc-stat{text-align:center;padding:1.4rem;background:white;border-radius:10px}
+.svc-stat-num{
+  font-family:'Rajdhani',sans-serif;font-size:2rem;font-weight:700;
+  background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.svc-stat-label{font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;margin-top:3px}
+ 
+/* WHY US PAGE */
+.pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem;margin-top:2.8rem}
+.pillar-card{
+  padding:2.2rem 1.8rem;border-radius:12px;
+  border:1px solid var(--light);background:var(--white);
+  transition:border-color 0.2s,transform 0.2s;
+}
+.pillar-card:hover{border-color:var(--purple);transform:translateY(-3px)}
+.pillar-icon{font-size:2.2rem;margin-bottom:1rem}
+.pillar-card h3{
+  font-family:'Rajdhani',sans-serif;font-size:1.2rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.65rem;
+  background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.pillar-card p{color:var(--muted);font-size:0.855rem;line-height:1.65}
+.diff-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.8rem;margin-top:2.8rem}
+.diff-item{
+  padding:1.8rem;border-radius:10px;
+  background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);
+}
+.diff-item h4{font-size:0.95rem;font-weight:600;color:var(--white);margin-bottom:0.45rem}
+.diff-item p{color:rgba(255,255,255,0.42);font-size:0.855rem;line-height:1.65}
+ 
+/* PROCESS TIMELINE */
+.process-timeline{max-width:780px;margin:3.5rem auto 0;position:relative;padding-left:56px}
+.process-timeline::before{
+  content:'';position:absolute;left:22px;top:0;bottom:0;
+  width:2px;background:var(--grad);opacity:0.22;
+}
+.timeline-step{position:relative;margin-bottom:2.8rem}
+.timeline-num{
+  position:absolute;left:-56px;top:0;
+  width:46px;height:46px;border-radius:50%;
+  background:white;box-shadow:0 0 0 2px var(--purple);
+  display:flex;align-items:center;justify-content:center;
+}
+.timeline-num span{
+  background:var(--grad-text);-webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;background-clip:text;
+  font-family:'Rajdhani',sans-serif;font-size:1.2rem;font-weight:700;
+}
+.timeline-content{background:var(--white);border:1px solid var(--light);border-radius:12px;padding:1.8rem}
+.timeline-content h3{
+  font-family:'Rajdhani',sans-serif;font-size:1.3rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.6rem;
+}
+.timeline-content p{color:var(--muted);font-size:0.875rem;line-height:1.7;margin-bottom:0.85rem}
+.tl-badge{
+  display:inline-block;font-size:0.72rem;font-weight:600;
+  letter-spacing:0.06em;text-transform:uppercase;
+  background:linear-gradient(135deg,rgba(107,127,227,0.08),rgba(232,87,154,0.08));
+  border:1px solid rgba(168,85,200,0.18);
+  padding:3px 12px;border-radius:100px;color:var(--purple);
+}
+ 
+/* LEARNING CENTER */
+.articles-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.8rem;margin-top:2.8rem}
+.article-card{
+  background:var(--white);border-radius:12px;
+  border:1px solid var(--light);overflow:hidden;
+  transition:transform 0.2s,border-color 0.2s;cursor:pointer;
+}
+.article-card:hover{transform:translateY(-3px);border-color:var(--purple)}
+.article-img{
+  height:160px;
+  background:linear-gradient(135deg,rgba(107,127,227,0.12),rgba(232,87,154,0.12));
+  display:flex;align-items:center;justify-content:center;font-size:2.5rem;
+}
+.article-body{padding:1.4rem}
+.article-cat{
+  font-size:0.68rem;font-weight:700;letter-spacing:0.1em;
+  text-transform:uppercase;margin-bottom:0.5rem;
+  background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.article-card h3{font-size:0.97rem;font-weight:600;color:var(--text);margin-bottom:0.5rem;line-height:1.4}
+.article-card p{color:var(--muted);font-size:0.82rem;line-height:1.6}
+.article-meta{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-top:1rem;padding-top:0.9rem;border-top:1px solid var(--light);
+  font-size:0.72rem;color:var(--muted);
+}
+.article-read{background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:600}
+.filter-bar{display:flex;gap:0.6rem;flex-wrap:wrap;margin-bottom:1.8rem}
+.filter-btn{
+  padding:7px 16px;border-radius:100px;font-size:0.78rem;font-weight:500;
+  border:1.5px solid var(--light);background:white;cursor:pointer;
+  transition:all 0.2s;color:var(--muted);
+}
+.filter-btn.active,.filter-btn:hover{border-color:var(--purple);color:var(--purple);background:rgba(168,85,200,0.05)}
+.upload-box{
+  border:2px dashed rgba(168,85,200,0.28);border-radius:12px;
+  padding:2.8rem;text-align:center;margin-top:2rem;
+  background:rgba(168,85,200,0.02);cursor:pointer;
+  transition:border-color 0.2s,background 0.2s;
+}
+.upload-box:hover{border-color:var(--purple);background:rgba(168,85,200,0.05)}
+.upload-box h4{font-size:1.05rem;font-weight:600;margin-bottom:0.4rem;color:var(--text)}
+.upload-box p{color:var(--muted);font-size:0.855rem}
+ 
+/* CONTACT FORM */
+.form-label{font-size:0.75rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:0.45rem}
+.form-input{
+  width:100%;padding:11px 15px;border:1.5px solid var(--light);
+  border-radius:8px;font-size:0.92rem;outline:none;
+  font-family:Inter,sans-serif;transition:border-color 0.2s;color:var(--text);
+}
+.form-input:focus{border-color:var(--purple)}
+.form-group{margin-bottom:1.1rem}
+ 
+/* RESPONSIVE */
+@media(max-width:900px){
+  .why-grid,.sd-grid,.sd-grid.rev,.diff-grid{grid-template-columns:1fr;gap:2.5rem}
+  .sd-grid.rev{direction:ltr}
+  .pillars-grid{grid-template-columns:1fr 1fr}
+  .process-steps{grid-template-columns:1fr 1fr}
+  .process-steps::before{display:none}
+  .footer-inner{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .nav-links{display:none}
+  .nav-logo-img{height:48px;max-width:200px}
+  .pillars-grid{grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr}
+  .process-steps{grid-template-columns:1fr}
+  .hero-logo img{width:min(320px,88vw)}
+}
 </style>
 </head>
 <body>
  
 <!-- NAV -->
-<nav>
-  <a href="#" class="nav-logo">
-    <svg class="zia" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="50" cy="50" r="10" fill="currentColor"/>
-      <rect x="47" y="8" width="6" height="24" rx="3" fill="currentColor"/>
-      <rect x="47" y="68" width="6" height="24" rx="3" fill="currentColor"/>
-      <rect x="8" y="47" width="24" height="6" rx="3" fill="currentColor"/>
-      <rect x="68" y="47" width="24" height="6" rx="3" fill="currentColor"/>
-      <rect x="47" y="14" width="6" height="14" rx="3" fill="currentColor" transform="rotate(45 50 50)"/>
-      <rect x="47" y="14" width="6" height="14" rx="3" fill="currentColor" transform="rotate(135 50 50)"/>
-      <rect x="47" y="14" width="6" height="14" rx="3" fill="currentColor" transform="rotate(225 50 50)"/>
-      <rect x="47" y="14" width="6" height="14" rx="3" fill="currentColor" transform="rotate(315 50 50)"/>
-    </svg>
-    <span>ALBUQUERQUE <em>DIGITAL</em></span>
-  </a>
+<nav id="mainNav">
+  <div class="nav-logo" onclick="showPage('home')">
+    <img class="nav-logo-img" src="./logo-abbrev.png" alt="Albuquerque Digital Marketing">
+  </div>
   <ul class="nav-links">
-    <li><a href="#services">Services</a></li>
-    <li><a href="#why">Why Us</a></li>
-    <li><a href="#process">Process</a></li>
-    <li><a href="#testimonials">Results</a></li>
-    <li><a href="#contact" class="nav-cta">Get a Free Audit</a></li>
+    <li><a onclick="showPage('home')" class="active" id="nav-home">Home</a></li>
+    <li><a onclick="showPage('services')" id="nav-services">Services</a></li>
+    <li><a onclick="showPage('why')" id="nav-why">Why Us</a></li>
+    <li><a onclick="showPage('process')" id="nav-process">Our Process</a></li>
+    <li><a onclick="showPage('learning')" id="nav-learning">Learning Center</a></li>
+    <li><a onclick="showPage('contact')" class="nav-cta" id="nav-contact">Free Audit</a></li>
   </ul>
 </nav>
  
-<!-- HERO -->
-<section class="hero">
-  <svg class="hero-bg-zia" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="100" cy="100" r="24" fill="white"/>
-    <rect x="94" y="12" width="12" height="50" rx="6" fill="white"/>
-    <rect x="94" y="138" width="12" height="50" rx="6" fill="white"/>
-    <rect x="12" y="94" width="50" height="12" rx="6" fill="white"/>
-    <rect x="138" y="94" width="50" height="12" rx="6" fill="white"/>
-    <rect x="94" y="28" width="12" height="30" rx="6" fill="white" transform="rotate(45 100 100)"/>
-    <rect x="94" y="28" width="12" height="30" rx="6" fill="white" transform="rotate(135 100 100)"/>
-    <rect x="94" y="28" width="12" height="30" rx="6" fill="white" transform="rotate(225 100 100)"/>
-    <rect x="94" y="28" width="12" height="30" rx="6" fill="white" transform="rotate(315 100 100)"/>
-  </svg>
+<!-- ===== HOME ===== -->
+<div class="page active" id="page-home">
  
-  <div class="hero-badge">ABQ's Local Digital Growth Partner</div>
+  <section class="hero">
+    <div class="hero-river-bg"></div>
+    <div class="hero-content">
+      <div class="hero-logo">
+        <img src="./logo-main.png" alt="Albuquerque Digital Marketing">
+      </div>
+      <div class="hero-badge"><span></span> ABQ's Local Digital Growth Partner</div>
+      <h1>
+        ABQ Businesses<br>
+        <span class="grad-line">Deserve Better</span>
+        Marketing
+      </h1>
+      <p class="hero-sub">
+        We're an <strong>Albuquerque-based digital marketing agency</strong> built exclusively for New Mexico businesses. Google Ads, SEO, Social Media, Websites — all driving real growth.
+      </p>
+      <div class="hero-actions">
+        <a class="btn-grad" onclick="showPage('contact')">Get a Free Audit</a>
+        <a class="btn-outline" onclick="showPage('services')">See Our Services</a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-number">200+</div><div class="stat-label">NM Businesses Served</div></div>
+      <div class="stat-div"></div>
+      <div class="stat"><div class="stat-number">94%</div><div class="stat-label">Client Retention Rate</div></div>
+      <div class="stat-div"></div>
+      <div class="stat"><div class="stat-number">$4.2M</div><div class="stat-label">Ad Spend Managed</div></div>
+      <div class="stat-div"></div>
+      <div class="stat"><div class="stat-number">12yr</div><div class="stat-label">In the ABQ Market</div></div>
+    </div>
+  </section>
  
-  <h1>
-    <span class="accent">ABQ Businesses</span>
-    <span class="underline-word">Deserve</span><br>Better Marketing
-  </h1>
- 
-  <p class="hero-sub">
-    We're a <strong>Albuquerque-based digital marketing agency</strong> built exclusively for New Mexico businesses. Google Ads, SEO, Social Media, Websites — all under one roof, all driving real growth.
-  </p>
- 
-  <div class="hero-actions">
-    <a href="#contact" class="btn-primary">Get a Free Audit</a>
-    <a href="#services" class="btn-ghost">See Our Services</a>
+  <div class="marquee-strip">
+    <div class="marquee-inner">
+      <span class="marquee-item">Google Ads</span><span style="color:rgba(255,255,255,0.4);padding:0 0.5rem"> ✦ </span>
+      <span class="marquee-item">SEO</span><span style="color:rgba(255,255,255,0.4);padding:0 0.5rem"> ✦ </span>
+      <span class="marquee-item">Social Media Marketing</span><span style="color:rgba(255,255,255,0.4);padding:0 0.5rem"> ✦ </span>
+      <span class="marquee-item">Website Design</span><span style="color:rgba(255,255,255,0.4);padding:0 0.5rem"> ✦ </span>
+      <span class="marquee-item">Reputation Management</span><span style="color:rgba(255,255,255,0.4);padding:0 0.5rem"> ✦ </span>
+      <span class="marquee-item">GEO Targeting</span><span style="color:rgba(255,255,255,0.4);padding:0 0.5rem"> ✦ </span>
+      <span class="marquee-item">AI Search Optimization</span><span style="color:rgba(255,255,255,0.4);padding:0 0.5rem"> ✦ </span>
+      <span class="marquee-item">Video Production</span><span style="color:rgba(255,255,255,0.4);padding:0 0.5rem"> ✦ </span>
+      <span class="marquee-item">Meta Ads</span><span style="color:rgba(255,255,255,0.4);padding:0 0.5rem"> ✦ </span>
+      <span class="marquee-item">Google Ads</span><span style="color:rgba(255,255,255,0.4);padding:0 0.5rem"> ✦ </span>
+      <span class="marquee-item">SEO</span><span style="color:rgba(255,255,255,0.4);padding:0 0.5rem"> ✦ </span>
+      <span class="marquee-item">Social Media Marketing</span><span style="color:rgba(255,255,255,0.4);padding:0 0.5rem"> ✦ </span>
+      <span class="marquee-item">Website Design</span><span style="color:rgba(255,255,255,0.4);padding:0 0.5rem"> ✦ </span>
+      <span class="marquee-item">Reputation Management</span><span style="color:rgba(255,255,255,0.4);padding:0 0.5rem"> ✦ </span>
+      <span class="marquee-item">GEO Targeting</span><span style="color:rgba(255,255,255,0.4);padding:0 0.5rem"> ✦ </span>
+      <span class="marquee-item">AI Search Optimization</span><span style="color:rgba(255,255,255,0.4);padding:0 0.5rem"> ✦ </span>
+      <span class="marquee-item">Video Production</span><span style="color:rgba(255,255,255,0.4);padding:0 0.5rem"> ✦ </span>
+      <span class="marquee-item">Meta Ads</span><span style="color:rgba(255,255,255,0.4);padding:0 0.5rem"> ✦ </span>
+    </div>
   </div>
  
-  <div class="hero-stats">
-    <div class="stat">
-      <div class="stat-number">200+</div>
-      <div class="stat-label">NM Businesses Served</div>
+  <!-- Services Preview -->
+  <section class="section section-white">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1.5rem">
+      <div>
+        <p class="eyebrow">What We Do</p>
+        <h2 class="section-title">Full-Service Digital,<br>Built for ABQ</h2>
+      </div>
+      <a class="btn-grad" onclick="showPage('services')">All Services →</a>
     </div>
-    <div class="stat-divider"></div>
-    <div class="stat">
-      <div class="stat-number">94%</div>
-      <div class="stat-label">Client Retention Rate</div>
+    <div class="services-grid">
+      <div class="svc-card" onclick="showPage('services')"><div class="svc-icon">🎯</div><h3>Google Ads & PPC</h3><p>Precision-targeted paid search that puts your business at the top of Google when ABQ customers are actively looking.</p><span class="svc-link">Learn More →</span></div>
+      <div class="svc-card" onclick="showPage('services')"><div class="svc-icon">🔍</div><h3>SEO & AI Search</h3><p>Rank for what matters — organic search, Google Maps, and the new wave of AI-powered search results.</p><span class="svc-link">Learn More →</span></div>
+      <div class="svc-card" onclick="showPage('services')"><div class="svc-icon">📱</div><h3>Social Media</h3><p>Content strategy, creation, and paid social advertising across Facebook, Instagram, and LinkedIn.</p><span class="svc-link">Learn More →</span></div>
+      <div class="svc-card" onclick="showPage('services')"><div class="svc-icon">🌐</div><h3>Website Design</h3><p>Custom-built websites that look sharp, load fast, and convert visitors into customers.</p><span class="svc-link">Learn More →</span></div>
+      <div class="svc-card" onclick="showPage('services')"><div class="svc-icon">⭐</div><h3>Reputation Management</h3><p>Monitor, protect, and grow your online reputation. More 5-star reviews, faster responses.</p><span class="svc-link">Learn More →</span></div>
+      <div class="svc-card" onclick="showPage('services')"><div class="svc-icon">📍</div><h3>GEO Targeting</h3><p>Hyper-local digital display advertising reaching the right ZIP codes across the ABQ metro.</p><span class="svc-link">Learn More →</span></div>
+      <div class="svc-card" onclick="showPage('services')"><div class="svc-icon">🎬</div><h3>Video Production</h3><p>Professional video content for social media, ads, websites, and streaming — scripted, shot, and edited by our in-house ABQ team.</p><span class="svc-link">Learn More →</span></div>
+      <div class="svc-card" onclick="showPage('services')"><div class="svc-icon">📣</div><h3>Meta Ads</h3><p>Facebook and Instagram advertising campaigns that build brand awareness and drive leads across the ABQ metro and beyond.</p><span class="svc-link">Learn More →</span></div>
     </div>
-    <div class="stat-divider"></div>
-    <div class="stat">
-      <div class="stat-number">$4.2M</div>
-      <div class="stat-label">Ad Spend Managed</div>
-    </div>
-    <div class="stat-divider"></div>
-    <div class="stat">
-      <div class="stat-number">12yr</div>
-      <div class="stat-label">In the ABQ Market</div>
-    </div>
-  </div>
-</section>
+  </section>
  
-<!-- MARQUEE -->
-<div class="marquee-strip">
-  <div class="marquee-inner">
-    <span class="marquee-item">Google Ads</span><span class="marquee-dot"> ✦ </span>
-    <span class="marquee-item">Search Engine Optimization</span><span class="marquee-dot"> ✦ </span>
-    <span class="marquee-item">Social Media Marketing</span><span class="marquee-dot"> ✦ </span>
-    <span class="marquee-item">Website Design</span><span class="marquee-dot"> ✦ </span>
-    <span class="marquee-item">Reputation Management</span><span class="marquee-dot"> ✦ </span>
-    <span class="marquee-item">GEO Targeting</span><span class="marquee-dot"> ✦ </span>
-    <span class="marquee-item">AI Search Optimization</span><span class="marquee-dot"> ✦ </span>
-    <span class="marquee-item">Google Ads</span><span class="marquee-dot"> ✦ </span>
-    <span class="marquee-item">Search Engine Optimization</span><span class="marquee-dot"> ✦ </span>
-    <span class="marquee-item">Social Media Marketing</span><span class="marquee-dot"> ✦ </span>
-    <span class="marquee-item">Website Design</span><span class="marquee-dot"> ✦ </span>
-    <span class="marquee-item">Reputation Management</span><span class="marquee-dot"> ✦ </span>
-    <span class="marquee-item">GEO Targeting</span><span class="marquee-dot"> ✦ </span>
-    <span class="marquee-item">AI Search Optimization</span><span class="marquee-dot"> ✦ </span>
-  </div>
+  <!-- Why Preview -->
+  <section class="section section-dark">
+    <div class="why-grid">
+      <div>
+        <p class="eyebrow">Why Choose Us</p>
+        <h2 class="section-title light">We Know This Market.<br>You Deserve Someone Who Does.</h2>
+        <div class="why-points">
+          <div class="why-point"><div class="why-num">01</div><div><h4>Local-First Strategy</h4><p>We build campaigns around ABQ's unique search patterns and neighborhood-level demographics — not national templates.</p></div></div>
+          <div class="why-point"><div class="why-num">02</div><div><h4>No Long-Term Contracts</h4><p>Month-to-month agreements mean we stay accountable to performance — not paperwork.</p></div></div>
+          <div class="why-point"><div class="why-num">03</div><div><h4>Transparent Reporting</h4><p>Live dashboards, plain-English reporting, and a dedicated account manager who actually answers the phone.</p></div></div>
+        </div>
+        <div style="margin-top:2rem"><a class="btn-grad" onclick="showPage('why')">Learn More About Us →</a></div>
+      </div>
+      <div class="results-card">
+        <div class="results-head">Client Results — ABQ Market</div>
+        <div class="result-row"><div><div class="result-client">Rio Grande Auto Group</div><div class="result-ind">Automotive</div></div><div class="result-metric">+312%<span>Lead Volume</span></div></div>
+        <div class="result-row"><div><div class="result-client">Casa Vista Law Firm</div><div class="result-ind">Legal Services</div></div><div class="result-metric">-48%<span>Cost Per Lead</span></div></div>
+        <div class="result-row"><div><div class="result-client">Sandia Smiles Dentistry</div><div class="result-ind">Healthcare</div></div><div class="result-metric">+218%<span>Organic Traffic</span></div></div>
+        <div class="result-row"><div><div class="result-client">Old Town Eats</div><div class="result-ind">Restaurant</div></div><div class="result-metric">4.9★<span>Review Rating</span></div></div>
+        <div class="result-row"><div><div class="result-client">Corrales Realty Group</div><div class="result-ind">Real Estate</div></div><div class="result-metric">+5.2x<span>ROAS</span></div></div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- Process Preview -->
+  <section class="section section-off">
+    <div style="text-align:center;max-width:580px;margin:0 auto">
+      <p class="eyebrow">How It Works</p>
+      <h2 class="section-title" style="max-width:100%">From Audit to Results in 30 Days</h2>
+      <p class="section-sub" style="max-width:100%;margin:0.9rem auto 0">No onboarding labyrinths. We move fast because your competition isn't standing still.</p>
+    </div>
+    <div class="process-steps">
+      <div class="proc-step"><div class="step-circle"><span>01</span></div><h4>Free Audit</h4><p>We analyze your digital footprint and show you exactly where you're leaving money on the table.</p></div>
+      <div class="proc-step"><div class="step-circle"><span>02</span></div><h4>Custom Strategy</h4><p>A market-specific growth plan built around your industry, competitors, and ABQ audience.</p></div>
+      <div class="proc-step"><div class="step-circle"><span>03</span></div><h4>Launch & Execute</h4><p>Campaigns go live within days. Our local team handles everything end-to-end.</p></div>
+      <div class="proc-step"><div class="step-circle"><span>04</span></div><h4>Report & Grow</h4><p>Monthly reviews, live dashboards, continuous optimization. We double down on what works.</p></div>
+    </div>
+    <div style="text-align:center;margin-top:2.8rem"><a class="btn-grad" onclick="showPage('process')">See Full Process →</a></div>
+  </section>
+ 
+  <!-- Testimonials -->
+  <section class="section section-white">
+    <div style="text-align:center;max-width:580px;margin:0 auto">
+      <p class="eyebrow">Client Stories</p>
+      <h2 class="section-title" style="max-width:100%">ABQ Businesses Growing With Us</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card"><div class="testi-stars"><span class="testi-star">★★★★★</span></div><p class="testi-text">"Before working with ABQ Digital, we were burning money on Google Ads with almost nothing to show for it. Within 60 days they cut our cost per lead by more than half and our phones have been ringing ever since."</p><div class="testi-author"><div class="author-av">MR</div><div><div class="author-name">Marcus Rodriguez</div><div class="author-biz">Owner, Rio Grande Auto Group</div></div></div></div>
+      <div class="testi-card"><div class="testi-stars"><span class="testi-star">★★★★★</span></div><p class="testi-text">"They rebuilt our website and launched an SEO campaign that took us from page 4 to #1 for 'Albuquerque personal injury attorney.' The ROI has been remarkable. They know this market."</p><div class="testi-author"><div class="author-av">JL</div><div><div class="author-name">Jennifer Lujan</div><div class="author-biz">Managing Partner, Casa Vista Law</div></div></div></div>
+      <div class="testi-card"><div class="testi-stars"><span class="testi-star">★★★★★</span></div><p class="testi-text">"I was skeptical of digital marketing agencies — tried two others before ABQ Digital. These guys actually explain what they're doing, why it works, and they show up to every monthly call prepared."</p><div class="testi-author"><div class="author-av">TC</div><div><div class="author-name">Teresa Chavez</div><div class="author-biz">Owner, Sandia Smiles Dentistry</div></div></div></div>
+    </div>
+  </section>
+ 
+  <section class="cta-sec">
+    <h2>Ready to Grow Your <span class="grad-text">ABQ Business?</span></h2>
+    <p>Get a free digital marketing audit — no obligation, no sales pressure.</p>
+    <div class="cta-actions">
+      <a href="tel:5058030540" class="btn-grad">📞 (505) 803-0540</a>
+      <a href="mailto:AJ@Abqdigital.com" class="btn-outline">AJ@Abqdigital.com</a>
+    </div>
+  </section>
 </div>
  
-<!-- SERVICES -->
-<section class="services" id="services">
-  <div class="services-header">
-    <div>
-      <p class="section-eyebrow">What We Do</p>
-      <h2 class="section-title">Full-Service Digital, Built for ABQ</h2>
-    </div>
-    <p class="section-sub">Every service we offer is designed around one thing: getting Albuquerque businesses more customers at a lower cost per lead.</p>
-  </div>
- 
-  <div class="services-grid">
-    <div class="service-card">
-      <div class="service-icon">🎯</div>
-      <h3>Google Ads & PPC</h3>
-      <p>Precision-targeted paid search campaigns that put your business at the top of Google when ABQ customers are actively looking. No wasted spend.</p>
-      <span class="service-tag">Google Partner →</span>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🔍</div>
-      <h3>SEO & AI Search</h3>
-      <p>Rank for what matters — organic search, Google Maps, and the new wave of AI-powered search results. Built for lasting visibility, not quick fixes.</p>
-      <span class="service-tag">AI-Ready SEO →</span>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">📱</div>
-      <h3>Social Media Marketing</h3>
-      <p>Content strategy, creation, and paid social advertising across Facebook, Instagram, and LinkedIn tailored to your ABQ audience and brand voice.</p>
-      <span class="service-tag">Organic + Paid →</span>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🌐</div>
-      <h3>Website Design & Dev</h3>
-      <p>Custom-built websites that look sharp, load fast, and convert visitors into customers. From landing pages to full rebuilds — we handle everything.</p>
-      <span class="service-tag">Mobile-First →</span>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">⭐</div>
-      <h3>Reputation Management</h3>
-      <p>Monitor, protect, and grow your online reputation. More 5-star reviews, faster responses, and a brand image that earns customer trust before the first call.</p>
-      <span class="service-tag">Review Growth →</span>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">📍</div>
-      <h3>GEO Targeting & Display</h3>
-      <p>Hyper-local digital display advertising that reaches the right ZIP codes, neighborhoods, and demographics across the Albuquerque metro and Rio Grande corridor.</p>
-      <span class="service-tag">ABQ-Focused →</span>
+<!-- ===== SERVICES PAGE ===== -->
+<div class="page" id="page-services">
+  <div class="page-hero">
+    <div class="page-hero-content">
+      <p class="eyebrow">Our Services</p>
+      <h1>Digital Marketing<br><span class="grad-text">Built for ABQ</span></h1>
+      <p>Every service we offer is designed around one thing: getting Albuquerque businesses more customers at a lower cost per lead.</p>
     </div>
   </div>
-</section>
  
-<!-- WHY US -->
-<section class="why" id="why">
-  <svg class="why-bg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="100" cy="100" r="24" fill="white"/>
-    <rect x="94" y="12" width="12" height="50" rx="6" fill="white"/>
-    <rect x="94" y="138" width="12" height="50" rx="6" fill="white"/>
-    <rect x="12" y="94" width="50" height="12" rx="6" fill="white"/>
-    <rect x="138" y="94" width="50" height="12" rx="6" fill="white"/>
-  </svg>
+  <div class="service-detail">
+    <div class="sd-grid">
+      <div><div class="svc-detail-icon">🎯</div><p class="eyebrow">Paid Search</p><h2 class="svc-detail-title">Google Ads & PPC Management</h2><p class="svc-detail-desc">Most businesses waste 40–60% of their Google Ads budget on clicks that never convert. We fix that. Our PPC specialists build tightly structured campaigns with precise keyword targeting, compelling ad copy, and conversion-optimized landing pages tuned for the ABQ market.</p><ul class="svc-features"><li>Full account audits and restructuring</li><li>ABQ-specific keyword research and negative keyword management</li><li>Responsive Search Ads with A/B testing</li><li>Conversion tracking setup and optimization</li><li>Monthly performance reviews with plain-English reporting</li><li>Google Local Services Ads setup</li></ul><a class="btn-grad" onclick="showPage('contact')">Get a Free PPC Audit</a></div>
+      <div class="svc-visual"><div class="svc-stat-grid"><div class="svc-stat"><div class="svc-stat-num">-48%</div><div class="svc-stat-label">Avg Cost Per Lead Reduction</div></div><div class="svc-stat"><div class="svc-stat-num">+312%</div><div class="svc-stat-label">Lead Volume Increase</div></div><div class="svc-stat"><div class="svc-stat-num">5.2x</div><div class="svc-stat-label">Average ROAS</div></div><div class="svc-stat"><div class="svc-stat-num">30d</div><div class="svc-stat-label">Time to First Results</div></div></div><div style="margin-top:1.2rem;padding:1.2rem;background:white;border-radius:10px"><p style="font-size:0.8rem;color:var(--muted);line-height:1.6"><strong style="color:var(--text)">Industries we specialize in:</strong><br>Legal, Healthcare, Automotive, Home Services, Real Estate, Restaurants, Retail</p></div></div>
+    </div>
+  </div>
  
-  <div class="why-grid">
-    <div>
-      <p class="section-eyebrow">Why Albuquerque Digital</p>
-      <h2 class="section-title" style="color: white; max-width: 400px;">We Know This Market. You Deserve Someone Who Does.</h2>
-      <p class="section-sub" style="color: rgba(255,255,255,0.5); margin-bottom: 2.5rem;">Big agencies treat ABQ like a secondary market. We live here, sell here, and understand how New Mexico customers actually behave online.</p>
+  <div class="service-detail">
+    <div class="sd-grid rev">
+      <div><div class="svc-detail-icon">🔍</div><p class="eyebrow">Organic Search</p><h2 class="svc-detail-title">SEO & AI Search Optimization</h2><p class="svc-detail-desc">Search is changing fast. Beyond traditional Google rankings, your business now needs to be visible in AI-powered results from ChatGPT, Perplexity, and Google's AI Overviews. We build SEO strategies that capture visibility across all of them — with a local ABQ focus.</p><ul class="svc-features"><li>Technical SEO audit and on-page optimization</li><li>Google Business Profile management and local pack optimization</li><li>AI search visibility (GEO/AEO) strategy</li><li>Content creation targeting ABQ keywords</li><li>Link building with local New Mexico publishers</li><li>Monthly rank tracking and traffic reporting</li></ul><a class="btn-grad" onclick="showPage('contact')">Get a Free SEO Audit</a></div>
+      <div class="svc-visual"><div class="svc-stat-grid"><div class="svc-stat"><div class="svc-stat-num">+218%</div><div class="svc-stat-label">Avg Organic Traffic Increase</div></div><div class="svc-stat"><div class="svc-stat-num">#1</div><div class="svc-stat-label">Local Pack Rankings Achieved</div></div><div class="svc-stat"><div class="svc-stat-num">6mo</div><div class="svc-stat-label">Avg Time to Page 1</div></div><div class="svc-stat"><div class="svc-stat-num">AI</div><div class="svc-stat-label">Ready Optimization</div></div></div></div>
+    </div>
+  </div>
  
-      <div class="why-points">
-        <div class="why-point">
-          <div class="why-point-num">01</div>
-          <div class="why-point-content">
-            <h4>Local-First Strategy</h4>
-            <p>We build campaigns around Albuquerque's unique search patterns, seasonal behaviors, and neighborhood-level demographics — not national templates.</p>
+  <div class="service-detail">
+    <div class="sd-grid">
+      <div><div class="svc-detail-icon">📱</div><p class="eyebrow">Social Media</p><h2 class="svc-detail-title">Social Media Marketing & Advertising</h2><p class="svc-detail-desc">Social media done right builds brand loyalty, drives traffic, and generates real leads. We handle everything from content creation and community management to paid social campaigns — all tailored to ABQ audiences and your brand voice.</p><ul class="svc-features"><li>Monthly content calendars and post creation</li><li>Facebook & Instagram paid advertising</li><li>LinkedIn B2B advertising campaigns</li><li>Community management and comment responses</li><li>Influencer partnerships with ABQ creators</li><li>Monthly analytics and performance reporting</li></ul><a class="btn-grad" onclick="showPage('contact')">Get a Free Social Audit</a></div>
+      <div class="svc-visual"><div class="svc-stat-grid"><div class="svc-stat"><div class="svc-stat-num">3x</div><div class="svc-stat-label">Avg Engagement Increase</div></div><div class="svc-stat"><div class="svc-stat-num">+156%</div><div class="svc-stat-label">Follower Growth</div></div><div class="svc-stat"><div class="svc-stat-num">$2.40</div><div class="svc-stat-label">Avg Cost Per Click</div></div><div class="svc-stat"><div class="svc-stat-num">6</div><div class="svc-stat-label">Platforms Managed</div></div></div></div>
+    </div>
+  </div>
+ 
+  <div class="service-detail">
+    <div class="sd-grid rev">
+      <div><div class="svc-detail-icon">🌐</div><p class="eyebrow">Web Design</p><h2 class="svc-detail-title">Website Design & Development</h2><p class="svc-detail-desc">Your website is your hardest-working salesperson. It needs to look professional, load in under 2 seconds, and convert visitors into leads. We build custom websites that do all three — from landing pages to full e-commerce builds.</p><ul class="svc-features"><li>Custom design built around your brand</li><li>Mobile-first, Core Web Vitals optimized</li><li>SEO-ready structure from day one</li><li>Conversion rate optimization built in</li><li>CMS integration so you can update content yourself</li><li>Ongoing maintenance and hosting plans available</li></ul><a class="btn-grad" onclick="showPage('contact')">Get a Free Website Audit</a></div>
+      <div class="svc-visual"><div class="svc-stat-grid"><div class="svc-stat"><div class="svc-stat-num">&lt;2s</div><div class="svc-stat-label">Average Load Time</div></div><div class="svc-stat"><div class="svc-stat-num">100</div><div class="svc-stat-label">PageSpeed Score Target</div></div><div class="svc-stat"><div class="svc-stat-num">+67%</div><div class="svc-stat-label">Avg Conversion Rate Lift</div></div><div class="svc-stat"><div class="svc-stat-num">30d</div><div class="svc-stat-label">Average Build Time</div></div></div></div>
+    </div>
+  </div>
+ 
+  <div class="service-detail">
+    <div class="sd-grid">
+      <div><div class="svc-detail-icon">⭐</div><p class="eyebrow">Reputation Management</p><h2 class="svc-detail-title">Online Reputation Management</h2><p class="svc-detail-desc">85% of consumers trust online reviews as much as personal recommendations. We take control of your reputation — systematically building a 5-star presence across every platform that matters to ABQ customers.</p><ul class="svc-features"><li>Automated review request campaigns via SMS & email</li><li>Google, Yelp, Facebook, and industry-specific platform monitoring</li><li>Rapid response management to negative reviews</li><li>Review widgets embedded on your website</li><li>Competitor reputation benchmarking</li><li>Monthly reputation score reporting</li></ul><a class="btn-grad" onclick="showPage('contact')">Protect Your Reputation</a></div>
+      <div class="svc-visual"><div class="svc-stat-grid"><div class="svc-stat"><div class="svc-stat-num">4.9★</div><div class="svc-stat-label">Avg Client Rating</div></div><div class="svc-stat"><div class="svc-stat-num">+140</div><div class="svc-stat-label">New Reviews / Year Avg</div></div><div class="svc-stat"><div class="svc-stat-num">2hr</div><div class="svc-stat-label">Avg Review Response Time</div></div><div class="svc-stat"><div class="svc-stat-num">8</div><div class="svc-stat-label">Platforms Monitored</div></div></div></div>
+    </div>
+  </div>
+ 
+  <div class="service-detail">
+    <div class="sd-grid rev">
+      <div><div class="svc-detail-icon">📍</div><p class="eyebrow">Display Advertising</p><h2 class="svc-detail-title">GEO Targeting & Display Advertising</h2><p class="svc-detail-desc">Reach the exact customers you want — in the exact neighborhoods you serve. Our hyper-local GEO targeting puts your ads in front of ABQ residents by ZIP code, neighborhood, household income, and behavior.</p><ul class="svc-features"><li>ZIP code and neighborhood-level targeting across ABQ metro</li><li>Programmatic display advertising</li><li>Streaming TV and audio advertising (OTT/CTV)</li><li>Retargeting campaigns for website visitors</li><li>Custom audience building from your customer list</li><li>Real-time impression and conversion tracking</li></ul><a class="btn-grad" onclick="showPage('contact')">Start a GEO Campaign</a></div>
+      <div class="svc-visual"><div class="svc-stat-grid"><div class="svc-stat"><div class="svc-stat-num">50+</div><div class="svc-stat-label">ABQ ZIP Codes Covered</div></div><div class="svc-stat"><div class="svc-stat-num">1M+</div><div class="svc-stat-label">Monthly Impressions</div></div><div class="svc-stat"><div class="svc-stat-num">$4</div><div class="svc-stat-label">Avg CPM Rate</div></div><div class="svc-stat"><div class="svc-stat-num">3x</div><div class="svc-stat-label">Higher CTR vs National Avg</div></div></div></div>
+    </div>
+  </div>
+ 
+  <div class="service-detail">
+    <div class="sd-grid">
+      <div><div class="svc-detail-icon">🎬</div><p class="eyebrow">Video Production</p><h2 class="svc-detail-title">Professional Video Production</h2><p class="svc-detail-desc">Video is the highest-converting content format across every digital channel — and most ABQ businesses are leaving it on the table. Our in-house production team creates professional video content built specifically for digital: social media ads, YouTube pre-roll, website hero videos, testimonial reels, and streaming TV spots. Every video is scripted, shot, and edited with your brand goals in mind.</p><ul class="svc-features"><li>Social media video ads (Reels, TikTok, YouTube Shorts)</li><li>TV and streaming commercial production (OTT/CTV)</li><li>Website hero and explainer videos</li><li>Customer testimonial video series</li><li>Product and service showcase videos</li><li>Full scripting, filming, and post-production included</li></ul><a class="btn-grad" onclick="showPage('contact')">Get a Video Quote</a></div>
+      <div class="svc-visual"><div class="svc-stat-grid"><div class="svc-stat"><div class="svc-stat-num">3x</div><div class="svc-stat-label">Higher Engagement vs Static Ads</div></div><div class="svc-stat"><div class="svc-stat-num">80%</div><div class="svc-stat-label">Of Consumers Prefer Video</div></div><div class="svc-stat"><div class="svc-stat-num">+49%</div><div class="svc-stat-label">Faster Revenue Growth w/ Video</div></div><div class="svc-stat"><div class="svc-stat-num">7d</div><div class="svc-stat-label">Avg Turnaround Time</div></div></div><div style="margin-top:1.2rem;padding:1.2rem;background:white;border-radius:10px"><p style="font-size:0.8rem;color:var(--muted);line-height:1.6"><strong style="color:var(--text)">Video formats we produce:</strong><br>Social Ads, YouTube Pre-Roll, TV Commercials, Testimonials, Website Heroes, Product Demos, Event Coverage</p></div></div>
+    </div>
+  </div>
+ 
+  <div class="service-detail">
+    <div class="sd-grid rev">
+      <div><div class="svc-detail-icon">📣</div><p class="eyebrow">Paid Social</p><h2 class="svc-detail-title">Meta Ads (Facebook & Instagram)</h2><p class="svc-detail-desc">With over 1.2 million New Mexicans on Facebook and Instagram, Meta advertising is one of the most powerful tools for reaching ABQ consumers. We build and manage Meta ad campaigns that go beyond boosting posts — full funnel strategies with precise audience targeting, compelling creative, and conversion-optimized landing pages that turn clicks into customers.</p><ul class="svc-features"><li>Facebook and Instagram campaign strategy and setup</li><li>Custom and lookalike audience building from your customer list</li><li>Retargeting campaigns for website visitors and video viewers</li><li>Ad creative design — static, carousel, and video formats</li><li>A/B testing of audiences, creative, and copy</li><li>Monthly performance reporting with actionable insights</li></ul><a class="btn-grad" onclick="showPage('contact')">Launch a Meta Campaign</a></div>
+      <div class="svc-visual"><div class="svc-stat-grid"><div class="svc-stat"><div class="svc-stat-num">$2.10</div><div class="svc-stat-label">Avg Cost Per Click ABQ</div></div><div class="svc-stat"><div class="svc-stat-num">4.2x</div><div class="svc-stat-label">Average ROAS Achieved</div></div><div class="svc-stat"><div class="svc-stat-num">+220%</div><div class="svc-stat-label">Avg Lead Volume Increase</div></div><div class="svc-stat"><div class="svc-stat-num">1M+</div><div class="svc-stat-label">NM Users Reachable</div></div></div><div style="margin-top:1.2rem;padding:1.2rem;background:white;border-radius:10px"><p style="font-size:0.8rem;color:var(--muted);line-height:1.6"><strong style="color:var(--text)">Best for:</strong><br>Restaurants, Retail, Home Services, Healthcare, Events, E-commerce, Real Estate, Automotive</p></div></div>
+    </div>
+  </div>
+ 
+  <section class="cta-sec">
+    <h2>Not Sure Which Service<br><span class="grad-text">Is Right for You?</span></h2>
+    <p>We'll audit your current digital presence for free and recommend exactly what will move the needle.</p>
+    <div class="cta-actions"><a href="tel:5058030540" class="btn-grad">📞 (505) 803-0540</a><a href="mailto:AJ@Abqdigital.com" class="btn-outline">AJ@Abqdigital.com</a></div>
+  </section>
+</div>
+ 
+<!-- ===== WHY US ===== -->
+<div class="page" id="page-why">
+  <div class="page-hero">
+    <div class="page-hero-content">
+      <p class="eyebrow">Why Albuquerque Digital Marketing</p>
+      <h1>We Live Here.<br><span class="grad-text">We Sell Here.</span></h1>
+      <p>Big agencies treat ABQ like a secondary market. We're 100% focused on New Mexico businesses — and that makes all the difference.</p>
+    </div>
+  </div>
+ 
+  <section class="section section-white">
+    <div style="text-align:center;max-width:580px;margin:0 auto">
+      <p class="eyebrow">Our Pillars</p>
+      <h2 class="section-title" style="max-width:100%">What Makes Us Different</h2>
+    </div>
+    <div class="pillars-grid">
+      <div class="pillar-card"><div class="pillar-icon">🏙️</div><h3>ABQ-Only Focus</h3><p>We don't serve 50 markets. Our entire strategy, research, and expertise is built around the Albuquerque-Santa Fe corridor. We know which ZIP codes convert, which neighborhoods have spending power, and how NM customers search online.</p></div>
+      <div class="pillar-card"><div class="pillar-icon">📊</div><h3>Results-First</h3><p>Every campaign starts with a clear KPI. We track cost per lead, ROAS, organic traffic, and conversion rate — not vanity metrics like impressions. If we can't show you ROI, we're doing something wrong.</p></div>
+      <div class="pillar-card"><div class="pillar-icon">🤝</div><h3>No Long-Term Contracts</h3><p>We've never needed them. Our month-to-month agreements keep us accountable to your results every single month. We earn your business by delivering, not by locking you in.</p></div>
+      <div class="pillar-card"><div class="pillar-icon">📞</div><h3>A Real Account Manager</h3><p>You'll have one dedicated point of contact who knows your business, your goals, and your industry. No ticket systems, no offshore support queues — a real person who answers the phone.</p></div>
+      <div class="pillar-card"><div class="pillar-icon">🔍</div><h3>Full Transparency</h3><p>Live reporting dashboards, monthly strategy calls, and plain-English explanations of everything we do. You'll always know where your money is going and what it's producing.</p></div>
+      <div class="pillar-card"><div class="pillar-icon">⚡</div><h3>Speed to Market</h3><p>Most agencies take 60–90 days to launch. We move in days. Our streamlined onboarding gets you live fast because every day you wait is a day your competitors are winning clicks.</p></div>
+    </div>
+  </section>
+ 
+  <section class="section-dark section" style="background:var(--dark2)">
+    <div style="max-width:880px;margin:0 auto">
+      <p class="eyebrow">Our Approach</p>
+      <h2 class="section-title light" style="max-width:100%;margin-bottom:1rem">Built Different from Day One</h2>
+      <p style="color:rgba(255,255,255,0.45);line-height:1.72;max-width:580px;margin-bottom:2.8rem;font-size:0.95rem">We started Albuquerque Digital Marketing because we saw too many local businesses getting burned by agencies that overpromised and underdelivered. Our model is simple: be the agency we wish existed when we were business owners.</p>
+      <div class="diff-grid">
+        <div class="diff-item"><h4>Industry Specialization</h4><p>We go deep in specific verticals — Legal, Healthcare, Automotive, Home Services, Real Estate, and Restaurants — because industry expertise means faster results and fewer learning curves on your budget.</p></div>
+        <div class="diff-item"><h4>Integrated Campaigns</h4><p>SEO and PPC work better together. Social amplifies your SEO content. Reputation management feeds your ad campaigns. We connect all your channels into one cohesive strategy.</p></div>
+        <div class="diff-item"><h4>AI-Ready Marketing</h4><p>Google's AI Overviews, ChatGPT, and Perplexity are changing how people find businesses. We're already building strategies for the next generation of search — not just the last one.</p></div>
+        <div class="diff-item"><h4>Community Investment</h4><p>We sponsor local ABQ events, partner with the Greater Albuquerque Chamber, and actively participate in the community we serve. Your success is our reputation.</p></div>
+      </div>
+    </div>
+  </section>
+ 
+  <section class="section section-off">
+    <div style="text-align:center;max-width:580px;margin:0 auto">
+      <p class="eyebrow">Client Stories</p>
+      <h2 class="section-title" style="max-width:100%">The Proof Is in the Numbers</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card"><div class="testi-stars"><span class="testi-star">★★★★★</span></div><p class="testi-text">"Before working with ABQ Digital, we were burning money on Google Ads with almost nothing to show for it. Within 60 days they cut our cost per lead by more than half and our phones have been ringing ever since."</p><div class="testi-author"><div class="author-av">MR</div><div><div class="author-name">Marcus Rodriguez</div><div class="author-biz">Owner, Rio Grande Auto Group</div></div></div></div>
+      <div class="testi-card"><div class="testi-stars"><span class="testi-star">★★★★★</span></div><p class="testi-text">"They rebuilt our website and launched an SEO campaign that took us from page 4 to #1 for 'Albuquerque personal injury attorney.' The ROI has been remarkable. They know this market."</p><div class="testi-author"><div class="author-av">JL</div><div><div class="author-name">Jennifer Lujan</div><div class="author-biz">Managing Partner, Casa Vista Law</div></div></div></div>
+      <div class="testi-card"><div class="testi-stars"><span class="testi-star">★★★★★</span></div><p class="testi-text">"I was skeptical of digital marketing agencies — tried two others. These guys actually explain what they're doing, why it works, and they show up to every monthly call prepared."</p><div class="testi-author"><div class="author-av">TC</div><div><div class="author-name">Teresa Chavez</div><div class="author-biz">Owner, Sandia Smiles Dentistry</div></div></div></div>
+    </div>
+  </section>
+ 
+  <section class="cta-sec">
+    <h2>Let's Talk About<br><span class="grad-text">Your Business</span></h2>
+    <p>No pitch decks. No pressure. Just an honest conversation about where you are and where you want to go.</p>
+    <div class="cta-actions"><a href="tel:5058030540" class="btn-grad">📞 (505) 803-0540</a><a href="mailto:AJ@Abqdigital.com" class="btn-outline">AJ@Abqdigital.com</a></div>
+  </section>
+</div>
+ 
+<!-- ===== PROCESS ===== -->
+<div class="page" id="page-process">
+  <div class="page-hero">
+    <div class="page-hero-content">
+      <p class="eyebrow">Our Process</p>
+      <h1>From Audit to<br><span class="grad-text">Results in 30 Days</span></h1>
+      <p>We've refined our process to get results fast without cutting corners. Here's exactly what happens when you become a client.</p>
+    </div>
+  </div>
+ 
+  <section class="section section-white">
+    <div style="display:grid;grid-template-columns:1fr 1.3fr;gap:5rem;align-items:start;max-width:1080px;margin:0 auto">
+      <div>
+        <p class="eyebrow">The Full Journey</p>
+        <h2 class="section-title">Every Step.<br>No Surprises.</h2>
+        <p class="section-sub">We believe you should know exactly what's happening at every stage. No black boxes, no mystery. Just a clear process with clear deliverables.</p>
+        <div style="margin-top:2.2rem;display:flex;flex-direction:column;gap:1.2rem">
+          <div style="display:flex;gap:1rem;align-items:flex-start">
+            <div style="width:34px;height:34px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;color:white;font-size:0.78rem;font-weight:700;flex-shrink:0">✓</div>
+            <div><strong style="font-size:0.875rem">No setup fees</strong><p style="color:var(--muted);font-size:0.82rem;margin-top:2px">Onboarding is included. We don't charge you to get started.</p></div>
+          </div>
+          <div style="display:flex;gap:1rem;align-items:flex-start">
+            <div style="width:34px;height:34px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;color:white;font-size:0.78rem;font-weight:700;flex-shrink:0">✓</div>
+            <div><strong style="font-size:0.875rem">Live in days, not months</strong><p style="color:var(--muted);font-size:0.82rem;margin-top:2px">Most campaigns launch within 5–7 business days of signing.</p></div>
+          </div>
+          <div style="display:flex;gap:1rem;align-items:flex-start">
+            <div style="width:34px;height:34px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;color:white;font-size:0.78rem;font-weight:700;flex-shrink:0">✓</div>
+            <div><strong style="font-size:0.875rem">Month-to-month contracts</strong><p style="color:var(--muted);font-size:0.82rem;margin-top:2px">Stay because we're delivering — not because you're locked in.</p></div>
           </div>
         </div>
-        <div class="why-point">
-          <div class="why-point-num">02</div>
-          <div class="why-point-content">
-            <h4>No Long-Term Contracts</h4>
-            <p>We earn your business every month. Month-to-month agreements mean we stay accountable to performance — not paperwork.</p>
-          </div>
+        <div style="margin-top:2.2rem">
+          <a class="btn-grad" onclick="showPage('contact')">Start with a Free Audit</a>
         </div>
-        <div class="why-point">
-          <div class="why-point-num">03</div>
-          <div class="why-point-content">
-            <h4>Transparent Reporting</h4>
-            <p>Live dashboards, plain-English reporting, and a dedicated account manager who actually answers the phone. You always know exactly what's happening.</p>
-          </div>
-        </div>
+      </div>
+      <div class="process-timeline">
+        <div class="timeline-step"><div class="timeline-num"><span>01</span></div><div class="timeline-content"><h3>Free Digital Audit</h3><span class="tl-badge">Day 1 — Free</span><p style="margin-top:0.65rem">We analyze your Google Ads, SEO health, website performance, social presence, and online reputation. You get a clear picture of what's working, what's broken, and what your biggest opportunities are — at no cost.</p></div></div>
+        <div class="timeline-step"><div class="timeline-num"><span>02</span></div><div class="timeline-content"><h3>Strategy Presentation</h3><span class="tl-badge">Day 3–5</span><p style="margin-top:0.65rem">We present a custom growth plan built around your goals, budget, and competitive landscape. This includes channel recommendations, projected results, and a 90-day roadmap. No templates.</p></div></div>
+        <div class="timeline-step"><div class="timeline-num"><span>03</span></div><div class="timeline-content"><h3>Onboarding & Access</h3><span class="tl-badge">Day 5–7</span><p style="margin-top:0.65rem">We set up your client dashboard, connect your accounts (Google, Meta, GA4), and assign your dedicated account manager. Full visibility from day one.</p></div></div>
+        <div class="timeline-step"><div class="timeline-num"><span>04</span></div><div class="timeline-content"><h3>Campaign Build & Launch</h3><span class="tl-badge">Day 7–14</span><p style="margin-top:0.65rem">Our team builds your campaigns — keyword lists, ad copy, landing pages, audiences, tracking. Everything gets a quality review before going live. Most clients launch within two weeks of signing.</p></div></div>
+        <div class="timeline-step"><div class="timeline-num"><span>05</span></div><div class="timeline-content"><h3>Optimization Sprint</h3><span class="tl-badge">Days 14–30</span><p style="margin-top:0.65rem">The first 30 days are about learning and optimizing. We cut what's not working and double down on what is. Most clients see measurable results within the first month.</p></div></div>
+        <div class="timeline-step"><div class="timeline-num"><span>06</span></div><div class="timeline-content"><h3>Monthly Review & Scale</h3><span class="tl-badge">Ongoing</span><p style="margin-top:0.65rem">Every month we review performance against your KPIs, discuss what we're testing next, and plan how to scale what's working. You always know what happened and what comes next.</p></div></div>
       </div>
     </div>
+  </section>
  
-    <div class="why-visual">
-      <div class="results-title">CLIENT RESULTS — ABQ MARKET</div>
-      <div class="result-row">
-        <div>
-          <div class="result-client">Rio Grande Auto Group</div>
-          <div class="result-industry">Automotive</div>
-        </div>
-        <div class="result-metric">+312%<span>Lead Volume</span></div>
-      </div>
-      <div class="result-row">
-        <div>
-          <div class="result-client">Casa Vista Law Firm</div>
-          <div class="result-industry">Legal Services</div>
-        </div>
-        <div class="result-metric">-48%<span>Cost Per Lead</span></div>
-      </div>
-      <div class="result-row">
-        <div>
-          <div class="result-client">Sandia Smiles Dentistry</div>
-          <div class="result-industry">Healthcare</div>
-        </div>
-        <div class="result-metric">+218%<span>Organic Traffic</span></div>
-      </div>
-      <div class="result-row">
-        <div>
-          <div class="result-client">Old Town Eats</div>
-          <div class="result-industry">Restaurant</div>
-        </div>
-        <div class="result-metric">4.9★<span>Review Rating</span></div>
-      </div>
-      <div class="result-row">
-        <div>
-          <div class="result-client">Corrales Realty Group</div>
-          <div class="result-industry">Real Estate</div>
-        </div>
-        <div class="result-metric">+5.2x<span>ROAS</span></div>
-      </div>
+  <section class="section section-off">
+    <div style="text-align:center;max-width:580px;margin:0 auto">
+      <p class="eyebrow">What to Expect</p>
+      <h2 class="section-title" style="max-width:100%">Realistic Timelines by Channel</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;margin-top:2.8rem">
+      <div class="testi-card" style="text-align:center"><div style="font-size:1.8rem;margin-bottom:0.85rem">🎯</div><h4 style="font-family:'Rajdhani',sans-serif;font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.4rem">Google Ads</h4><span class="tl-badge">Results in 2–4 weeks</span><p style="color:var(--muted);font-size:0.82rem;line-height:1.6;margin-top:0.75rem">Fastest ROI channel. Leads start coming in within the first few weeks as campaigns optimize.</p></div>
+      <div class="testi-card" style="text-align:center"><div style="font-size:1.8rem;margin-bottom:0.85rem">🔍</div><h4 style="font-family:'Rajdhani',sans-serif;font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.4rem">SEO</h4><span class="tl-badge">Results in 3–6 months</span><p style="color:var(--muted);font-size:0.82rem;line-height:1.6;margin-top:0.75rem">Long-term investment with compounding returns. Early wins in local pack and long-tail keywords.</p></div>
+      <div class="testi-card" style="text-align:center"><div style="font-size:1.8rem;margin-bottom:0.85rem">📱</div><h4 style="font-family:'Rajdhani',sans-serif;font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.4rem">Social Media</h4><span class="tl-badge">Results in 4–8 weeks</span><p style="color:var(--muted);font-size:0.82rem;line-height:1.6;margin-top:0.75rem">Brand awareness builds quickly. Paid social generates leads within the first month.</p></div>
+      <div class="testi-card" style="text-align:center"><div style="font-size:1.8rem;margin-bottom:0.85rem">⭐</div><h4 style="font-family:'Rajdhani',sans-serif;font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.4rem">Reputation</h4><span class="tl-badge">Results in 30–60 days</span><p style="color:var(--muted);font-size:0.82rem;line-height:1.6;margin-top:0.75rem">New reviews start flowing within weeks. Rating improvements visible within 60 days.</p></div>
+    </div>
+  </section>
+ 
+  <section class="cta-sec">
+    <h2>Ready to Start<br><span class="grad-text">Your Journey?</span></h2>
+    <p>Step one is free. Let us audit your digital presence and show you what's possible.</p>
+    <div class="cta-actions"><a href="tel:5058030540" class="btn-grad">📞 (505) 803-0540</a><a onclick="showPage('contact')" class="btn-outline" style="cursor:pointer">Schedule a Free Audit</a></div>
+  </section>
+</div>
+ 
+<!-- ===== LEARNING CENTER ===== -->
+<div class="page" id="page-learning">
+  <div class="page-hero" style="background:linear-gradient(135deg,var(--dark) 0%,#1a0d2e 100%)">
+    <div class="page-hero-content">
+      <p class="eyebrow">Albuquerque Learning Center</p>
+      <h1>Digital Marketing<br><span class="grad-text">Education for ABQ</span></h1>
+      <p>Free guides, strategies, and insights written specifically for Albuquerque business owners. No jargon, no fluff — just actionable knowledge.</p>
     </div>
   </div>
-</section>
  
-<!-- PROCESS -->
-<section class="process" id="process">
-  <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-    <p class="section-eyebrow">How It Works</p>
-    <h2 class="section-title" style="max-width: 100%; font-size: clamp(2rem, 4vw, 3rem);">From Audit to Results in 30 Days</h2>
-    <p class="section-sub" style="max-width: 100%; margin: 1rem auto 0;">No onboarding labyrinths. No 90-day waiting periods. We move fast because your competition isn't standing still.</p>
+  <section class="section section-white">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1.5rem;margin-bottom:2rem">
+      <div><p class="eyebrow">All Articles</p><h2 class="section-title" style="font-size:1.9rem">Latest from the Learning Center</h2></div>
+    </div>
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filterArticles('all',this)">All Topics</button>
+      <button class="filter-btn" onclick="filterArticles('seo',this)">SEO</button>
+      <button class="filter-btn" onclick="filterArticles('google-ads',this)">Google Ads</button>
+      <button class="filter-btn" onclick="filterArticles('social',this)">Social Media</button>
+      <button class="filter-btn" onclick="filterArticles('web',this)">Website</button>
+      <button class="filter-btn" onclick="filterArticles('local',this)">Local Marketing</button>
+    </div>
+    <div class="articles-grid" id="articlesGrid">
+      <div class="article-card" data-cat="seo"><div class="article-img">🔍</div><div class="article-body"><div class="article-cat">SEO</div><h3>The Complete Guide to Local SEO for Albuquerque Businesses</h3><p>How to dominate Google Maps and local search results in the ABQ market — step by step.</p><div class="article-meta"><span>June 2025 · 8 min read</span><span class="article-read">Read →</span></div></div></div>
+      <div class="article-card" data-cat="google-ads"><div class="article-img">🎯</div><div class="article-body"><div class="article-cat">Google Ads</div><h3>Why Your Google Ads Are Wasting Money (And How to Fix It)</h3><p>The 7 most common PPC mistakes we see from ABQ businesses and exactly how to correct them.</p><div class="article-meta"><span>May 2025 · 6 min read</span><span class="article-read">Read →</span></div></div></div>
+      <div class="article-card" data-cat="local"><div class="article-img">📍</div><div class="article-body"><div class="article-cat">Local Marketing</div><h3>Albuquerque Business Owner's Guide to Google Business Profile</h3><p>Optimize your GBP listing to show up at the top of local searches and attract more customers.</p><div class="article-meta"><span>May 2025 · 5 min read</span><span class="article-read">Read →</span></div></div></div>
+      <div class="article-card" data-cat="seo"><div class="article-img">🤖</div><div class="article-body"><div class="article-cat">SEO</div><h3>AI Search Optimization: What ABQ Businesses Need to Know in 2025</h3><p>ChatGPT and Google's AI Overviews are changing how customers find businesses. Here's how to stay visible.</p><div class="article-meta"><span>April 2025 · 7 min read</span><span class="article-read">Read →</span></div></div></div>
+      <div class="article-card" data-cat="social"><div class="article-img">📱</div><div class="article-body"><div class="article-cat">Social Media</div><h3>Facebook vs Instagram Ads for Albuquerque Small Businesses</h3><p>Which platform delivers better ROI for local businesses in the ABQ market? We analyzed 50 campaigns.</p><div class="article-meta"><span>April 2025 · 5 min read</span><span class="article-read">Read →</span></div></div></div>
+      <div class="article-card" data-cat="web"><div class="article-img">🌐</div><div class="article-body"><div class="article-cat">Website</div><h3>Does Your ABQ Business Website Pass the 5-Second Test?</h3><p>Visitors decide whether to stay or leave in under 5 seconds. Here's how to make sure they convert.</p><div class="article-meta"><span>March 2025 · 4 min read</span><span class="article-read">Read →</span></div></div></div>
+    </div>
+    <div class="upload-box" onclick="document.getElementById('articleUpload').click()">
+      <div style="font-size:2.2rem;margin-bottom:0.85rem">📄</div>
+      <h4>Upload a New Article</h4>
+      <p>Drop an HTML or Markdown file here to add it to the Learning Center</p>
+      <input type="file" id="articleUpload" accept=".html,.md,.txt" style="display:none" onchange="handleArticleUpload(event)">
+      <div style="margin-top:1.4rem"><span class="btn-grad" style="font-size:0.82rem;padding:9px 22px">Choose File to Upload</span></div>
+    </div>
+  </section>
+</div>
+ 
+<!-- ===== CONTACT ===== -->
+<div class="page" id="page-contact">
+  <div class="page-hero">
+    <div class="page-hero-content">
+      <p class="eyebrow">Get in Touch</p>
+      <h1>Let's Grow Your<br><span class="grad-text">ABQ Business</span></h1>
+      <p>Fill out the form and we'll get back to you within one business day with a free audit of your current digital presence.</p>
+    </div>
   </div>
- 
-  <div class="process-steps">
-    <div class="process-step">
-      <div class="step-circle"><span>01</span></div>
-      <h4>Free Audit</h4>
-      <p>We analyze your current digital footprint — Google Ads, SEO, website, and reputation — and show you exactly where you're leaving money on the table.</p>
-    </div>
-    <div class="process-step">
-      <div class="step-circle"><span>02</span></div>
-      <h4>Custom Strategy</h4>
-      <p>No cookie-cutter plans. We build a market-specific growth strategy based on your industry, your competitors, and your ABQ target audience.</p>
-    </div>
-    <div class="process-step">
-      <div class="step-circle"><span>03</span></div>
-      <h4>Launch & Execute</h4>
-      <p>Campaigns go live within days. Our local team handles everything — creative, targeting, tracking — so you can focus on running your business.</p>
-    </div>
-    <div class="process-step">
-      <div class="step-circle"><span>04</span></div>
-      <h4>Report & Grow</h4>
-      <p>Monthly strategy reviews, live performance dashboards, and continuous optimization. We double down on what works and cut what doesn't.</p>
-    </div>
-  </div>
-</section>
- 
-<!-- TESTIMONIALS -->
-<section class="testimonials" id="testimonials">
-  <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-    <p class="section-eyebrow">Client Stories</p>
-    <h2 class="section-title" style="max-width: 100%; font-size: clamp(2rem, 4vw, 3rem);">ABQ Businesses Growing With Us</h2>
-  </div>
- 
-  <div class="testimonials-grid">
-    <div class="testimonial-card">
-      <div class="testimonial-stars">★★★★★</div>
-      <p class="testimonial-text">"Before working with ABQ Digital, we were burning money on Google Ads with almost nothing to show for it. Within 60 days they cut our cost per lead by more than half and our phones have been ringing ever since."</p>
-      <div class="testimonial-author">
-        <div class="author-avatar">MR</div>
-        <div>
-          <div class="author-name">Marcus Rodriguez</div>
-          <div class="author-biz">Owner, Rio Grande Auto Group</div>
+  <section class="section section-white">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;max-width:960px;margin:0 auto;align-items:start">
+      <div>
+        <h3 style="font-family:'Rajdhani',sans-serif;font-size:1.4rem;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:1.8rem">Send Us a Message</h3>
+        <div class="form-group"><label class="form-label">Your Name</label><input type="text" class="form-input" placeholder="John Smith"></div>
+        <div class="form-group"><label class="form-label">Business Name</label><input type="text" class="form-input" placeholder="Your Business LLC"></div>
+        <div class="form-group"><label class="form-label">Phone Number</label><input type="tel" class="form-input" placeholder="(505) 000-0000"></div>
+        <div class="form-group"><label class="form-label">Email Address</label><input type="email" class="form-input" placeholder="john@yourbusiness.com"></div>
+        <div class="form-group"><label class="form-label">What Are You Looking For?</label><select class="form-input"><option>Google Ads / PPC</option><option>SEO & AI Search</option><option>Social Media Marketing</option><option>Website Design</option><option>Reputation Management</option><option>GEO Targeting</option><option>Full-Service Package</option><option>Not Sure — Free Audit</option></select></div>
+        <div class="form-group"><label class="form-label">Tell Us About Your Business</label><textarea class="form-input" rows="4" placeholder="Tell us about your business, goals, and any current marketing challenges..." style="resize:vertical"></textarea></div>
+        <button class="btn-grad" style="width:100%;padding:13px;font-size:0.95rem;border:none" onclick="alert('Thank you! We will be in touch within one business day.')">Send Message & Request Free Audit</button>
+      </div>
+      <div>
+        <h3 style="font-family:'Rajdhani',sans-serif;font-size:1.4rem;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:1.8rem">Contact Info</h3>
+        <div style="display:flex;flex-direction:column;gap:1.4rem">
+          <div style="display:flex;gap:1rem;align-items:flex-start"><div style="width:42px;height:42px;border-radius:10px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0">📞</div><div><div style="font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:3px">Phone</div><a href="tel:5058030540" style="font-size:1.05rem;font-weight:600;color:var(--text);text-decoration:none">(505) 803-0540</a></div></div>
+          <div style="display:flex;gap:1rem;align-items:flex-start"><div style="width:42px;height:42px;border-radius:10px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0">✉️</div><div><div style="font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:3px">Email</div><a href="mailto:AJ@Abqdigital.com" style="font-size:1rem;font-weight:600;color:var(--text);text-decoration:none">AJ@Abqdigital.com</a></div></div>
+          <div style="display:flex;gap:1rem;align-items:flex-start"><div style="width:42px;height:42px;border-radius:10px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0">📍</div><div><div style="font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:3px">Location</div><p style="font-size:0.92rem;color:var(--text);line-height:1.6">Albuquerque, NM<br>Serving the Rio Grande Corridor</p></div></div>
+          <div style="display:flex;gap:1rem;align-items:flex-start"><div style="width:42px;height:42px;border-radius:10px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0">🕐</div><div><div style="font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:3px">Hours</div><p style="font-size:0.92rem;color:var(--text);line-height:1.6">Mon–Fri: 8am – 6pm MST<br>Sat: By appointment</p></div></div>
+        </div>
+        <div style="margin-top:2.2rem;padding:1.4rem;background:var(--offwhite);border-radius:12px;border:1px solid var(--light)">
+          <h4 style="font-size:0.875rem;font-weight:600;margin-bottom:0.5rem">What Happens After You Submit?</h4>
+          <ol style="color:var(--muted);font-size:0.84rem;line-height:1.7;padding-left:1.1rem">
+            <li>We review your submission within 1 business day</li>
+            <li>We run a free audit of your digital presence</li>
+            <li>We schedule a 30-minute discovery call</li>
+            <li>We present our findings — no obligation</li>
+          </ol>
         </div>
       </div>
     </div>
-    <div class="testimonial-card">
-      <div class="testimonial-stars">★★★★★</div>
-      <p class="testimonial-text">"They rebuilt our website and launched an SEO campaign that took us from page 4 to #1 for 'Albuquerque personal injury attorney.' The ROI has been remarkable. They know this market."</p>
-      <div class="testimonial-author">
-        <div class="author-avatar">JL</div>
-        <div>
-          <div class="author-name">Jennifer Lujan</div>
-          <div class="author-biz">Managing Partner, Casa Vista Law</div>
-        </div>
-      </div>
-    </div>
-    <div class="testimonial-card">
-      <div class="testimonial-stars">★★★★★</div>
-      <p class="testimonial-text">"I was skeptical of digital marketing agencies — tried two others before ABQ Digital. These guys actually explain what they're doing, why it works, and they show up to every monthly call prepared. Huge difference."</p>
-      <div class="testimonial-author">
-        <div class="author-avatar">TC</div>
-        <div>
-          <div class="author-name">Teresa Chavez</div>
-          <div class="author-biz">Owner, Sandia Smiles Dentistry</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
- 
-<!-- CTA -->
-<section class="cta-section" id="contact">
-  <svg class="cta-bg-zia" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="100" cy="100" r="24" fill="white"/>
-    <rect x="94" y="12" width="12" height="50" rx="6" fill="white"/>
-    <rect x="94" y="138" width="12" height="50" rx="6" fill="white"/>
-    <rect x="12" y="94" width="50" height="12" rx="6" fill="white"/>
-    <rect x="138" y="94" width="50" height="12" rx="6" fill="white"/>
-    <rect x="94" y="28" width="12" height="30" rx="6" fill="white" transform="rotate(45 100 100)"/>
-    <rect x="94" y="28" width="12" height="30" rx="6" fill="white" transform="rotate(135 100 100)"/>
-    <rect x="94" y="28" width="12" height="30" rx="6" fill="white" transform="rotate(225 100 100)"/>
-    <rect x="94" y="28" width="12" height="30" rx="6" fill="white" transform="rotate(315 100 100)"/>
-  </svg>
- 
-  <h2>Ready to Grow Your <span>ABQ Business?</span></h2>
-  <p>Get a free digital marketing audit — no obligation, no sales pressure. We'll show you exactly what's holding your online presence back.</p>
-  <div class="cta-actions">
-    <a href="tel:5059999999" class="btn-primary">📞 (505) 999-9999</a>
-    <a href="mailto:hello@abqdigital.com" class="btn-ghost">hello@abqdigital.com</a>
-  </div>
-</section>
+  </section>
+</div>
  
 <!-- FOOTER -->
 <footer>
-  <div class="footer-top">
-    <div class="footer-brand">
-      <a href="#" class="nav-logo" style="margin-bottom: 1rem; display: flex;">
-        <svg class="zia" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="fill: #00B4A6;">
-          <circle cx="50" cy="50" r="10" fill="currentColor"/>
-          <rect x="47" y="8" width="6" height="24" rx="3" fill="currentColor"/>
-          <rect x="47" y="68" width="6" height="24" rx="3" fill="currentColor"/>
-          <rect x="8" y="47" width="24" height="6" rx="3" fill="currentColor"/>
-          <rect x="68" y="47" width="24" height="6" rx="3" fill="currentColor"/>
-        </svg>
-        <span style="font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; letter-spacing: 0.08em; color: white; line-height: 1; align-self: center; margin-left: 10px;">ALBUQUERQUE <em style="color: #00B4A6; font-style: normal;">DIGITAL</em></span>
-      </a>
-      <p class="footer-tagline">ABQ's locally-owned digital marketing agency. Helping New Mexico businesses grow since 2012.</p>
-    </div>
-    <div class="footer-links">
-      <h5>Services</h5>
-      <ul>
-        <li><a href="#">Google Ads & PPC</a></li>
-        <li><a href="#">SEO & AI Search</a></li>
-        <li><a href="#">Social Media</a></li>
-        <li><a href="#">Website Design</a></li>
-        <li><a href="#">Reputation Management</a></li>
-        <li><a href="#">GEO Targeting</a></li>
-      </ul>
-    </div>
-    <div class="footer-links">
-      <h5>Company</h5>
-      <ul>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Case Studies</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Careers</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </div>
+  <div class="footer-inner">
     <div>
-      <h5 style="font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 1rem;">Contact Us</h5>
-      <div class="footer-contact">
-        <div><a href="tel:5059999999">(505) 999-9999</a></div>
-        <div><a href="mailto:hello@abqdigital.com">hello@abqdigital.com</a></div>
-        <div style="margin-top: 0.5rem; line-height: 1.6;">123 Central Ave NW<br>Albuquerque, NM 87102</div>
-      </div>
+      <img class="footer-logo-img" src="./logo-abbrev.png" alt="Albuquerque Digital Marketing">
+      <p class="footer-tagline">Albuquerque's locally-owned digital marketing agency. Helping New Mexico businesses grow.</p>
     </div>
+    <div class="footer-col"><h5>Services</h5><ul><li><a onclick="showPage('services')">Google Ads & PPC</a></li><li><a onclick="showPage('services')">SEO & AI Search</a></li><li><a onclick="showPage('services')">Social Media</a></li><li><a onclick="showPage('services')">Website Design</a></li><li><a onclick="showPage('services')">Reputation Management</a></li><li><a onclick="showPage('services')">GEO Targeting</a></li></ul></div>
+    <div class="footer-col"><h5>Company</h5><ul><li><a onclick="showPage('why')">Why Us</a></li><li><a onclick="showPage('process')">Our Process</a></li><li><a onclick="showPage('learning')">Learning Center</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul></div>
+    <div class="footer-col"><h5>Contact</h5><ul><li><a href="tel:5058030540" class="footer-contact-link">(505) 803-0540</a></li><li><a href="mailto:AJ@Abqdigital.com" class="footer-contact-link">AJ@Abqdigital.com</a></li><li style="color:rgba(255,255,255,0.3);font-size:0.84rem;margin-top:0.2rem">Albuquerque, NM</li></ul></div>
   </div>
   <div class="footer-bottom">
-    <span>© 2024 Albuquerque Digital Marketing, LLC. All rights reserved.</span>
-    <div style="display: flex; gap: 1.5rem;">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Service</a>
-    </div>
+    <span>© 2025 Albuquerque Digital Marketing, LLC. All rights reserved.</span>
+    <div style="display:flex;gap:1.4rem"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
   </div>
 </footer>
  
+<script>
+function showPage(name) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+  const page = document.getElementById('page-' + name);
+  if(page) { page.classList.add('active'); window.scrollTo(0,0); }
+  const navLink = document.getElementById('nav-' + name);
+  if(navLink) navLink.classList.add('active');
+}
+window.addEventListener('scroll', function() {
+  document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 20);
+});
+function filterArticles(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.article-card').forEach(card => {
+    card.style.display = (cat === 'all' || card.dataset.cat === cat) ? 'block' : 'none';
+  });
+}
+function handleArticleUpload(event) {
+  const file = event.target.files[0];
+  if(!file) return;
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const grid = document.getElementById('articlesGrid');
+    const card = document.createElement('div');
+    card.className = 'article-card';
+    card.dataset.cat = 'local';
+    const name = file.name.replace(/\.[^.]+$/, '').replace(/[-_]/g,' ');
+    card.innerHTML = `<div class="article-img">📄</div><div class="article-body"><div class="article-cat">Uploaded</div><h3>${name}</h3><p>Click to read this article.</p><div class="article-meta"><span>Just uploaded</span><span class="article-read">Read →</span></div></div>`;
+    card.onclick = function() { const w = window.open('','_blank'); w.document.write(e.target.result); };
+    grid.insertBefore(card, grid.firstChild);
+  };
+  reader.readAsText(file);
+}
+</script>
 </body>
 </html>
- 
